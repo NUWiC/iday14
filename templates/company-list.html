@@ -2,6 +2,8 @@
 footer take up less space + center # results on footer
 perhaps use status bar looking thing instead
 header shrink
+
+http://nuwic.github.io/iday14/#/companies
  -->
 
 
@@ -48,7 +50,7 @@ Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).l
             <!-- ui-sref="tabs.companies.detail({companyNameId: c.compId})" -->
 
             <!-- http://lizzb.github.io/img/logos/carsdotcom/wide.png -->
-            <a href="#/iday14/companies/{{c.id}}"  class="item item-avatar item-icon-right">
+            <a href="/companies/{{c.id}}"  class="item item-avatar item-icon-right">
 
             <img src="http://placehold.it/60x60" ng-src="./img/logos/{{c.id}}/square.png" />
 

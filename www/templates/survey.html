@@ -1,44 +1,6 @@
-
-
-
-
 <ion-view title="Feedback Survey" left-buttons="leftButtons">
 
 <ion-content>
-
-<!--form class="list" ng-show="showForm">
-<div class="item item-divider"> Attendee Info </div>
-<label class="item item-input">
-  <input type="text" placeholder="First Name" ng-model="attendee.firstname">
-</label>
-<label class="item item-input">
-  <input type="text" placeholder="Last Name" ng-model="attendee.lastname">
-</label>
-<div class="item item-divider">
-  Shirt Size
-</div>
-<ion-radio ng-repeat="shirtSize in shirtSizes"
-           ng-value="shirtSize.value"
-           ng-model="attendee.shirtSize">
-  {{ shirtSize.text }}
-</ion-radio>
-<div class="item item-divider">
-  Lunch
-</div>
-<ion-toggle ng-model="attendee.vegetarian">
-  Vegetarian
-</ion-toggle>
-<div class="padding">
-  <button class="button button-block" ng-click="submit()">Checkin</button>
-</div>
-</form>
-
-<div ng-hide="showForm">
-<pre ng-bind="attendee | json"></pre> 
-<a href="#/event/attendees">View attendees</a>
-</div-->
-
-
 
 <h1> Industry Day 2014 Student Survey </h1>
 
@@ -151,90 +113,34 @@ How did you find out about Industry Day?<br>(check all that apply)
 <!--/p-->
 
 
-
-
-
-<!--div class="item item-divider">
-How did you prepare for Industry Day? (check all that apply)
-</div>
-<div class="list">
-
-<li>
-<label class="item-checkbox">
-<div class="checkbox checkbox-input-hidden">
-<input type="checkbox"><i class="checkbox-icon"></i>
-</div>Brought Resume
-</label>
-</li>
-<li>
-<label class="item-checkbox">
-<div class="checkbox checkbox-input-hidden">
-<input type="checkbox"><i class="checkbox-icon"></i>
-</div>Researched Companies
-</label>
-<li>
-<label class="item-checkbox">
-<div class="checkbox checkbox-input-hidden">
-<input type="checkbox"><i class="checkbox-icon"></i>
-</div>Used Web App
-</label>
-</li>
-<li>
-<label class="item-checkbox">
-<div class="checkbox checkbox-input-hidden">
-<input type="checkbox"><i class="checkbox-icon"></i>
-</div>Used SWE Website
-</label>
-</li>
-<li>
-<label class="item-checkbox">
-<div class="checkbox checkbox-input-hidden">
-<input type="checkbox"><i class="checkbox-icon"></i>
-</div>Other:
-</label>
-</li></div-->
-
-
-
-
-
-
-<!--
-
-<ion-checkbox ng-model="isChecked">Checkbox Label</ion-checkbox> -->
-
-
-
 <div class="item item-divider"> Event Logistics </div>
-<!--ion-toggle ng-model="attendee.vegetarian"> Vegetarian </ion-toggle-->
 
-<ion-checkbox ng-model="convenientDate.checked"
+<!-- 
+convenientDate.checked
+convenientTime.checked
+convenientLocation.checked
+-->
+<ion-checkbox ng-model="convenientDate"
               ng-true-value="Yes"
               ng-false-value="No">
     Was the date convenient for you?
-    <span class="item-note positive">{{convenientDate.checked}}</span>
+    <span class="item-note positive">{{convenientDate}}</span>
 </ion-checkbox>
 
 
-<ion-checkbox ng-model="convenientTime.checked"
+<ion-checkbox ng-model="convenientTime"
               ng-true-value="Yes"
               ng-false-value="No">
     Was the time convenient for you?
-    <span class="item-note positive">{{convenientTime.checked}}</span>
+    <span class="item-note positive">{{convenientTime}}</span>
 </ion-checkbox>
 
-<ion-checkbox ng-model="convenientLocation.checked"
+<ion-checkbox ng-model="convenientLocation"
               ng-true-value="Yes"
               ng-false-value="No">
     Was the location convenient for you?
-    <span class="item-note positive">{{convenientLocation.checked}}</span>
+  <span class="item-note positive">{{convenientLocation}}</span>
 </ion-checkbox>
-
-
-
-
-<!--ion-item>Was the location convenient for you?</ion-item>
-Yes No-->
 
 
 
@@ -255,10 +161,8 @@ Number of companies with whom you spoke:
 </ion-item>
 
 
-
-
 <div class="padding">
-  <button class="button button-block" ng-click="submit()">Checkin</button>
+<button class="button button-block" ng-click="submit()">Checkin</button>
 </div>
 
 
@@ -274,6 +178,12 @@ Thank you for attending Industry Day, and best of luck! - The Society of Women o
 
 </ion-content>
 </ion-view>
+
+
+
+<!--ion-toggle ng-model="attendee.vegetarian"> Vegetarian </ion-toggle-->
+
+<!--<ion-checkbox ng-model="isChecked">Checkbox Label</ion-checkbox> -->
 
 
 

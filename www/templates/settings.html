@@ -1,44 +1,37 @@
+<!-- THIS PAGE IS CURRENTLY NOT BEING USED
+INSTEAD A MODAL ON THE COMPANY LIST PAGE IS USED TO DEFINE FILTER SETTINGS -->
+
 <ion-view title="Search/Filter Settings" left-buttons="leftButtons">
-  <!--ion-nav-buttons side="left">
-    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
-  </ion-nav-buttons-->
   <ion-content>
 
-
-
-
-  <!--Showing {{filteredList.length}} of {{companies.length}} total. <br-->
-
-
-
-  <!--Search: <input ng-model="query"> <i class="fa fa-search"> </i> <br>-->
-
-  <!--Filter by: <i class="fa fa-filter"> </i>
-<li ng-repeat="company in filteredList = (companies | filter:userFilter | filter:query | orderBy:sortType:asc)" class="thumbnail">
- <i class="glyphicon glyphicon-star-empty listing-star"></i-->
- 
   <!--
+
+  ng-model="company.starred"
+
   Companies matching your filters: {{filteredCompanies = (companies | filter:userFilter).length}} (of {{companies.length}} total).
--->
-
-Companies matching your filters: {{companies = (companies | filter:userFilter).length}} (of {{allCompanies.length}} total).
 
 
+  Companies matching your filters: {{companies = (companies | filter:userFilter).length}} (of {{allCompanies.length}} total).
 
-  <!--
-   Showing {{filteredList.length}} of {{all_companies.length}} total.
-  Companies matching your filters: {{currentCompanies.length}}
-  {{ (all_companies | filter:userFilter).length }}
+  Showing {{filteredList.length}} of {{companies.length}} total. <br>
+  Search: <input ng-model="query"> <i class="fa fa-search"> </i> <br>
 
-  -->
-    
-    <!--<h1> Filter Settings</h1>
-  
-Showing {{filteredList.length}} of {{all_companies.length}} total. <br>
-        {{filteredList.length}} of {{all_companies.length}} total companies. <br
+  <h1> Filter Settings</h1>
 
-<i class="fa fa-filter fa-lg"></i> Filter by:     
-        -->
+  <i class="fa fa-filter fa-lg"></i> Filter by:     
+  Filter by: <i class="fa fa-filter"> </i>
+<li ng-repeat="company in filteredList = (companies | filter:userFilter | filter:query | orderBy:sortType:asc)" class="thumbnail">
+ <i class="glyphicon glyphicon-star-empty listing-star"></i>
+ -->
+ 
+
+<!--
+you can have multiple majors
+and be seeking multiple positions
+(eg checkboxes, not radio buttons
+filter as written uses checkboxes - would need to change if wanted to make only one in either category selectable
+--> 
+
 
 <div class="list">
 
@@ -52,16 +45,6 @@ Showing {{filteredList.length}} of {{all_companies.length}} total. <br>
         </ion-checkbox>
 
 
-
-
-<!-- to show off the radio button we'll assume you only have one major, overachiever 
-easily changed but changing to checkbox
-
-... actually making a checkbox because filter as written uses checkboxes and i dont feel like hcanging it atm :)
-
-ng-model="company.starred"
--->
-
         <div class="item item-divider"> Majors </div>
         
         <ion-checkbox ng-repeat="item in majors"
@@ -71,55 +54,7 @@ ng-model="company.starred"
           {{ item.friendlyName }}
         </ion-checkbox>
         
-
-        <!-- these are fake below -->
-        <!--div class="item item-divider"> Notifications </div>
-        
-        <ion-toggle ng-model="pushNotification.checked"
-                      ng-change="pushNotificationChange()">
-          Enable Push Notifications
-        </ion-toggle>
-        
-        
-        <ion-toggle ng-model="emailNotification"
-                      ng-true-value="Subscribed"
-                      ng-false-value="Unubscribed">
-          Include companies seeking "All Majors"
-        </ion-toggle-->
-        
       </div>
 
   </ion-content>
 </ion-view>
-
-
-
-
-
-          
-<!--
-
-
-        <li class="divider"></li>
-        <li class="dropdown-header">Positions</li>
-
-        <div class="form-group">
-          <checkbox-inline ng-repeat="p in positions">
-          <label>
-            <input type="checkbox" ng-click="includePosition(p.name)">
-            &nbsp;{{p.friendlyName}}
-            </label>
-        </div> <!--/form-group--
-
-
-
-        <li class="divider"></li>
-        <li class="dropdown-header">Majors</li>
-        
-         <div class="form-group"> <!-- data-toggle="buttons"--
-          <checkbox-inline ng-repeat="m in majors">
-          <label>
-            <input type="checkbox" ng-click="includeMajor(m.name)">
-            &nbsp;{{m.friendlyName}}
-            </label>
-        </div> <!--/form-group-->

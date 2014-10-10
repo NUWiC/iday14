@@ -19,8 +19,7 @@
   <i class="fa fa-lg" ng-class="(sortProp=='booth' && asc) ? 'fa-sort-numeric-desc' : 'fa-sort-numeric-asc'"></i>
   Booth
 </button>
-<!--
-Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).length}} of {{allCompanies.length}} total.--> 
+
 &nbsp;&nbsp;&nbsp;<!-- hacky padding -->
     <label class="item-input-wrapper">
       <i class="icon ion-ios7-search placeholder-icon"></i>
@@ -82,9 +81,7 @@ Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).l
         </ion-content>
 
 
-        <!--div class="bar bar-footer bar-balanced">
-  <div class="title">Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).length}} of {{allCompanies.length}} total.</div>
-</div-->
+
         <ion-footer-bar class="bar-stable">Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).length}} of {{allCompanies.length}} total.
 </ion-footer-bar>
 
@@ -121,71 +118,9 @@ Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).l
           {{ item.friendlyName }}
         </ion-checkbox>
 
-        <div class="list card">
-          <div class="item item-avatar">
-            <img src="http://placekitten.com/30/30">
-            <h2>{{user.firstName}} {{user.lastName}}</h2>
-            <p>{{user.email}}</p>
-          </div>
-          <div class="item item-image">
-            <img src="http://placekitten.com/200/150">
-          </div>
-          <div class="item item-divider">Close the modal to change your info</div>
-        </div>
       </ion-content>
     </div>
   </script>
 
 
 
-
-<script type="text/ng-template" id="catmodal.html">
-    <div class="modal">
-      <ion-header-bar>
-        <h1 class="title">{{user.firstName}} {{user.lastName}}</h1>
-        <div class="buttons">
-          <button class="button button-clear icon ion-close" ng-click="closeModal()"></button>
-        </div>
-      </ion-header-bar>
-      <ion-content>
-        <div class="list card">
-          <div class="item item-avatar">
-            <img src="http://placekitten.com/30/30">
-            <h2>{{user.firstName}} {{user.lastName}}</h2>
-            <p>{{user.email}}</p>
-          </div>
-          <div class="item item-image">
-            <img src="http://placekitten.com/200/150">
-          </div>
-          <div class="item item-divider">Close the modal to change your info</div>
-        </div>
-      </ion-content>
-    </div>l
-  </script>
-
-
-    <!--
-    <ion-list>
-
-      <ion-item ng-repeat="c in filteredList = (companies |  filter:searchText | orderBy:sortType:asc)" class="item-thumbnail-left" href="#/app/companies/{{c.nameId}}">
-
-      <img ng-src="./img/logos/{{c.nameId}}/{{c.nameId}}-square.png" /> 
-        <h2>{{c.name}}</h2>
-      </ion-item>
-
-    </ion-list>
-    -->
-
-
-
-<!-- notes to return to:
-
-hrm, header shrink isnt working...
-header-shrink scroll-event-interval="5"
-
-
-<div class="ionic list">
-
-        !-- can i assign the filter here? --
-        <div ng-repeat="c in filteredList = (companies |  filter:searchText | orderBy:sortType:asc)">
--->

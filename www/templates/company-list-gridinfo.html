@@ -1,5 +1,14 @@
 <ion-view title="Recruiting Companies" left-buttons="leftButtons">
 
+<style>
+.matchesReqs {
+  font-weight: bold;
+}
+.strikeout {
+   text-decoration: line-through;
+}
+</style>
+
         <ion-nav-buttons side="right">
         <button ng-click="openModal()" class="button button-royal icon ion-funnel icon-large"></button>
         </ion-nav-buttons>  
@@ -29,14 +38,7 @@
             class="button button-small button-icon ion-android-close input-button"
             ng-click="clearSearch()"> </button>
   </ion-header-bar>
-<style>
-.matchesReqs {
-  font-weight: bold;
-}
-.strikeout {
-   text-decoration: line-through;
-}
-</style>
+
 
         <ion-content>
           <ion-list>

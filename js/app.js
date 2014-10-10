@@ -6,7 +6,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $stateProvider
     .state('sidemenu', {
-      url: "/iday",
+      url: "/",
       abstract: true,
       templateUrl: "templates/sidemenu.html",
     })
@@ -87,7 +87,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   
   // Fall back on this URL otherwise
-  $urlRouterProvider.otherwise("/iday/companies");
+  $urlRouterProvider.otherwise("/companies");
 
   // use the HTML5 History API
   $locationProvider.html5Mode(true);

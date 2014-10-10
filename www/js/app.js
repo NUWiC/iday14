@@ -2,7 +2,7 @@
 
 var app = angular.module('ionicApp', ['ionic'])
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $stateProvider
     .state('sidemenu', {
@@ -83,11 +83,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
       views: { 'menuContent' :{ templateUrl: "templates/company-list-all-details.html", controller: "CompanyListCtrl" } }
     })
 
-
+    
 
   
   // Fall back on this URL otherwise
   $urlRouterProvider.otherwise("/iday/companies");
+
+  // use the HTML5 History API
+  $locationProvider.html5Mode(true);
 });
 
 

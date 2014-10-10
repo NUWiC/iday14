@@ -20,6 +20,7 @@ instead of boolean 0 1 its 0 "label that exists to prompt un-starring" -->
 
 <!-- for some reason, the plunker will change the star fill with the toggle, but this wont?? --><!--ng-true-value="Un-star this company"
           ng-false-value="Star this company"-->
+
     <ion-toggle class="item item-icon-left"
           ng-model="company.starred" toggle-class="toggle-royal">
       <i class="icon royal"
@@ -27,7 +28,7 @@ instead of boolean 0 1 its 0 "label that exists to prompt un-starring" -->
       <span>{{company.name}}</span>
       <span class="item-note"> {{company.starred}}</span> <!-- need initial text....??? -->
     </ion-toggle>
-    <a class="item item-icon-right positive" href="#/iday/map/{{company.id}}">
+    <a class="item item-icon-right positive" href="#/iday14/map/{{company.id}}">
       <i class="icon ion-navigate"></i>
       Booth # {{company.booth}}: {{company.room}} (Floor {{company.floor}})
     </a>

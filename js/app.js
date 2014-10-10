@@ -6,7 +6,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $stateProvider
     .state('sidemenu', {
-      url: "/",
+      url: "/#/",
       abstract: true,
       templateUrl: "templates/sidemenu.html",
     })

@@ -74,8 +74,8 @@ viewBox="{{startX}} {{startY}} {{mapWidth}} {{mapHeight}}">
 
     <g ng-attr-transform="translate({{b.x}}, {{b.y}})">
 
-
-<g id="{{b.compId}}-tooltip" class="st18 tooltip" ng-show="tooltipIsVisible" ng-click="go('iday/companies/{{b.compId}}')">
+<!-- go('iday/companies/{{b.compId}}')"> -->
+<g id="{{b.compId}}-tooltip" class="st18 tooltip" ng-show="tooltipIsVisible" ng-click="go('iday14/companies/{{b.compId}}')">
 <!-- possibly apply ng class to display favorites diff color? -->
         <path id="background"
               class="tooltip-bg" fill="#dff"
@@ -91,11 +91,12 @@ viewBox="{{startX}} {{startY}} {{mapWidth}} {{mapHeight}}">
         <image class="compLogo" 
              x="-30" y="-70"
              width="120" height="30"
-             ng-xlink-href="http://lizzb.github.io/iday/www/img/logos/{{b.compId}}/wide.png" 
+             ng-xlink-href="./img/logos/{{b.compId}}/wide.png"
              xlink:href=""/>
 
       </g>
 
+<!-- ng-xlink-href="http://lizzb.github.io/iday/www/img/logos/{{b.compId}}/wide.png" -->
 
     <!-- need to add an ng-if rotate property exists to avoid plethora of errors in console -->
     <!-- apparently using ng if or ng switch inside ng repeat INSIDE svg is more complicated than i realized.... going to do easy/lame route of just assigning a rotate value to every booth 

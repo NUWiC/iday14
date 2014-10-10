@@ -64,14 +64,14 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       url: "map",
       views: { 'menuContent' :{ templateUrl: "templates/map.html", controller: "CompanyMapCtrl" } }
     })
-    
+    /*
     // sidemenu.map.company'
     .state('sidemenu.booth', {
       url: "map/:companyId",
       views: { 'menuContent' :{ templateUrl: "templates/map.html", controller: "CompanyMapCtrl" } }
     })
     
-    
+    */
     
     .state('sidemenu.companies-grid', {
       url: "companies-grid",
@@ -89,8 +89,9 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   // Fall back on this URL otherwise
   $urlRouterProvider.otherwise("companies");
 
+  // NOPE gonna use ugly hashtags in urls again
   // use the HTML5 History API
-  $locationProvider.html5Mode(true);
+  //$locationProvider.html5Mode(true);
 });
 
 

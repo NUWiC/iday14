@@ -75,9 +75,9 @@ viewBox="{{startX}} {{startY}} {{mapWidth}} {{mapHeight}}">
     <g ng-attr-transform="translate({{b.x}}, {{b.y}})">
 
 <!-- go('iday/companies/{{b.compId}}')"> /iday14/companies/{{c.id}}
-"go('iday14/companies/{{b.compId}}')">
+"go('iday14/companies/{{b.compId}}')" /companies/{{b.compId}}>
 -->
-<g id="{{b.compId}}-tooltip" class="st18 tooltip" ng-show="tooltipIsVisible" ng-click="go('/companies/{{b.compId}}')">
+<g id="{{b.compId}}-tooltip" class="st18 tooltip" ng-show="tooltipIsVisible" ng-click="go('iday14/companies/{{b.compId}}')">
 <!-- possibly apply ng class to display favorites diff color? -->
         <path id="background"
               class="tooltip-bg" fill="#dff"

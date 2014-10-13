@@ -87,8 +87,12 @@ Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).l
           </ion-list>
         </ion-content>
 
-<ion-footer-bar class="bar-stable">Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).length}} of {{allCompanies.length}} total.
-</ion-footer-bar>
+        <div id="result-count" class="bar bar-footer bar-stable">
+          <div class="title">Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).length}} of {{allCompanies.length}} total.</div>
+        </div>
+
+<!--ion-footer-bar id="result-count" class="bar bar-footer bar-stable">Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).length}} of {{allCompanies.length}} total.
+</ion-footer-bar-->
 
       </ion-view>
 

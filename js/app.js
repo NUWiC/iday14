@@ -6,7 +6,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $stateProvider
     .state('sidemenu', {
-      url: "/#/",
+      url: "/",
       abstract: true,
       templateUrl: "templates/sidemenu.html",
     })
@@ -31,7 +31,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     */
     
     .state('sidemenu.credits', {
-      url: "credits",
+      url: "/credits",
       views: { 'menuContent' :{ templateUrl: "templates/credits.html", controller: "MainCtrl" } } /*FilterSettingsCtrl*/
     })
 
@@ -87,7 +87,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   
   // Fall back on this URL otherwise
-  $urlRouterProvider.otherwise("companies");
+  $urlRouterProvider.otherwise("/companies");
 
   // NOPE gonna use ugly hashtags in urls again
   // use the HTML5 History API

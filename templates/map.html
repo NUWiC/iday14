@@ -75,7 +75,7 @@ viewBox="{{startX}} {{startY}} {{mapWidth}} {{mapHeight}}">
     <g ng-attr-transform="translate({{b.x}}, {{b.y}})">
 
 
-<g id="{{b.compId}}-tooltip" class="st18 tooltip" ng-show="tooltipIsVisible" ng-click="go('iday/companies/{{b.compId}}')">
+<g id="{{b.compId}}-tooltip" class="st18 tooltip" ng-show="tooltipIsVisible" ng-click="go('/companies/{{b.compId}}')">
 <!-- possibly apply ng class to display favorites diff color? -->
         <path id="background"
               class="tooltip-bg" fill="#dff"
@@ -168,115 +168,18 @@ didn't try casting i guess
 
 
 <style>
-st0{fill:#FFFFFF;}
-  .st1{fill:none;stroke:#EFEFEF;stroke-width:2;stroke-miterlimit:10;}
-  .st2{fill:#EFEFEF;}
-  .st3{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
-  .st4{enable-background:new    ;}
-  .st5{fill:#5CC4BE;}
-  .st6{fill:#9E9E9F;}
-  .st7{fill:#E0E0E0;}
-  .st8{fill:#BFBFBF;}
-  .st9{fill:#A7A9AC;}
-  .st10{fill:#C23E29;}
-  .st11{fill:#E54433;}
-  .st12{fill:#992E22;}
-  .st13{fill:none;}
-  .st14{fill:#5CC4BE;fill-opacity:0;}
-  .st15{fill:#6EE5DC;}
-  .st16{fill:#4A9993;}
-  .st17{fill:none;stroke:#EAEAEA;stroke-miterlimit:10;}
-  //.dialog, .tooltip, .st18{display:none;}
-  .st19{display:inline;opacity:0.85;}
-  .st20{display:inline;enable-background:new    ;}
+.st5{fill:#5CC4BE;}
+.st14{fill:#5CC4BE;fill-opacity:0;}
+ //.dialog, .tooltip, .st18{display:none;}
+
   .st21{display:inline;}
-  .st22{opacity:0.25;fill:#77787B;enable-background:new    ;}
-  .st23{fill:#606161;}
   .st24{display:inline;fill:none;stroke:#DDDDDC;stroke-miterlimit:10;}
   .st25{fill:#5CC3BD;}
-  .st26{display:inline;opacity:0.6;}
-  .st27{fill:#FEFEFE;}
-  .st28{fill:#CFCFCF;}
-  .st29{fill:#999999;}
-  .st30{fill:#BDBDBD;}
-  .st31{fill:#CCCCCC;}
-  .st32{fill:#B7B7B7;}
-  .st33{fill:#D7D7D7;}
-  .st34{fill:#9B9B9B;}
-  .st35{fill:#888888;}
-  .st36{fill:#C3C3C3;}
-  .st37{fill:#ABABAB;}
-  .st38{fill:#989898;}
-  .st39{fill:#8C8C8C;}
-  .st40{fill:#696969;}
-  .st41{fill:#A7A7A7;}
-  .st42{fill:#B8B8B8;}
-  .st43{fill:#B6B6B6;}
-  .st44{fill:#828282;}
-  .st45{fill:#B4B4B4;}
-  .st46{fill:#AFAFAF;}
-  .st47{fill:#A5A5A5;}
-  .st48{fill:#BEBEBE;}
-  .st49{fill:#8F8F8F;}
-  .st50{fill:#C1C1C1;}
-  .st51{fill:#ADADAD;}
-  .st52{fill:#CECECE;}
-  .st53{fill:#A9A9A9;}
-  .st54{fill:#7D7D7D;}
-  .st55{fill:#929292;}
-  .st56{fill:#787878;}
-  .st57{fill:#616161;}
-  .st58{fill:#9D9D9D;}
-  .st59{fill:#C5C5C5;}
-  .st60{fill:#B5B5B5;}
-  .st61{fill:#8E8E8E;}
-  .st62{fill:#C9C9C9;}
-  .st63{fill:#626262;}
-  .st64{fill:#A8A8A8;}
-  .st65{fill:#8B8B8B;}
-  .st66{fill:#858585;}
-  .st67{fill:#CBCBCB;}
-  .st68{fill:#555555;}
-  .st69{fill:#757575;}
-  .st70{fill:#656565;}
-  .st71{fill:#4E4E4E;}
-  .st72{fill:#BCBCBC;}
-  .st73{fill:#7C7C7C;}
-  .st74{fill:#919191;}
-  .st75{fill:#C0C0C0;}
-  .st76{fill:#646464;}
-  .st77{fill:#A0A0A0;}
-  .st78{fill:#767676;}
-  .st79{fill:#8D8D8D;}
-  .st80{fill:#575757;}
-  .st81{fill:#AAAAAA;}
-  .st82{fill:#9E9E9E;}
-  .st83{fill:#6F6F6F;}
-  .st84{fill:#3B3B3B;}
-  .st85{fill:#585858;}
-  .st86{fill:#4A4A4A;}
-  .st87{fill:#4C4C4C;}
-  .st88{fill:#868686;}
-  .st89{fill:#515151;}
-  .st90{fill:#969696;}
-  .st91{fill:#565656;}
-  .st92{fill:#A6A6A6;}
-  .st93{fill:#545454;}
-  .st94{fill:#303030;}
-  .st95{fill:#838383;}
-  .st96{fill:#A3A3A3;}
-  .st97{fill:#333333;}
-  .st98{fill:#242424;}
 
-  #row1, #closebutton {
-  cursor: pointer;
-}
-#closebutton {
-  opacity: .7;  
-}
-#closebutton:hover {
-  opacity: 1;  
-}
+
+#row1, #closebutton {  cursor: pointer;  }
+#closebutton {  opacity: .7;  }
+#closebutton:hover {  opacity: 1;  }
 #row1:hover #target {
   transition: fill-opacity 250ms ease;
   fill: #f9f9f9;
@@ -284,17 +187,13 @@ st0{fill:#FFFFFF;}
 }
 
 .close-button {/*st25*/}
-.dialog-divider {/*st24*/}
-
+.dialog-divider {/*st24*/} 
 .tooltip-bg {display:inline;opacity:0.85;}
-
 .close-label {font-family: Verdana; font-size: 10pt; } /*st0 */
-
 .tooltip-label {font-family: arial; fill: hotpink; text-anchor: start;}
-
 .dialog-title {font-family: Verdana;font-weight: bold;} /*st25*/ 
 
-  </style>
+</style>
 
 
 
@@ -372,3 +271,106 @@ st0{fill:#FFFFFF;}
 </ion-scroll>
     <!--/ion-content-->
     </ion-view>
+
+
+    <!--
+
+st0{fill:#FFFFFF;}
+  .st1{fill:none;stroke:#EFEFEF;stroke-width:2;stroke-miterlimit:10;}
+  .st2{fill:#EFEFEF;}
+  .st3{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+  .st4{enable-background:new    ;}
+  
+  .st6{fill:#9E9E9F;}
+  .st7{fill:#E0E0E0;}
+  .st8{fill:#BFBFBF;}
+  .st9{fill:#A7A9AC;}
+  .st10{fill:#C23E29;}
+  .st11{fill:#E54433;}
+  .st12{fill:#992E22;}
+  .st13{fill:none;}
+  
+  .st15{fill:#6EE5DC;}
+  .st16{fill:#4A9993;}
+  .st17{fill:none;stroke:#EAEAEA;stroke-miterlimit:10;}
+ 
+  .st19{display:inline;opacity:0.85;}
+  .st20{display:inline;enable-background:new    ;}
+  .st22{opacity:0.25;fill:#77787B;enable-background:new    ;}
+  .st23{fill:#606161;}
+
+.st26{display:inline;opacity:0.6;}
+  .st27{fill:#FEFEFE;}
+  .st28{fill:#CFCFCF;}
+  .st29{fill:#999999;}
+  .st30{fill:#BDBDBD;}
+  .st31{fill:#CCCCCC;}
+  .st32{fill:#B7B7B7;}
+  .st33{fill:#D7D7D7;}
+  .st34{fill:#9B9B9B;}
+  .st35{fill:#888888;}
+  .st36{fill:#C3C3C3;}
+  .st37{fill:#ABABAB;}
+  .st38{fill:#989898;}
+  .st39{fill:#8C8C8C;}
+  .st40{fill:#696969;}
+  .st41{fill:#A7A7A7;}
+  .st42{fill:#B8B8B8;}
+  .st43{fill:#B6B6B6;}
+  .st44{fill:#828282;}
+  .st45{fill:#B4B4B4;}
+  .st46{fill:#AFAFAF;}
+  .st47{fill:#A5A5A5;}
+  .st48{fill:#BEBEBE;}
+  .st49{fill:#8F8F8F;}
+  .st50{fill:#C1C1C1;}
+  .st51{fill:#ADADAD;}
+  .st52{fill:#CECECE;}
+  .st53{fill:#A9A9A9;}
+  .st54{fill:#7D7D7D;}
+  .st55{fill:#929292;}
+  .st56{fill:#787878;}
+  .st57{fill:#616161;}
+  .st58{fill:#9D9D9D;}
+  .st59{fill:#C5C5C5;}
+  .st60{fill:#B5B5B5;}
+  .st61{fill:#8E8E8E;}
+  .st62{fill:#C9C9C9;}
+  .st63{fill:#626262;}
+  .st64{fill:#A8A8A8;}
+  .st65{fill:#8B8B8B;}
+  .st66{fill:#858585;}
+  .st67{fill:#CBCBCB;}
+  .st68{fill:#555555;}
+  .st69{fill:#757575;}
+  .st70{fill:#656565;}
+  .st71{fill:#4E4E4E;}
+  .st72{fill:#BCBCBC;}
+  .st73{fill:#7C7C7C;}
+  .st74{fill:#919191;}
+  .st75{fill:#C0C0C0;}
+  .st76{fill:#646464;}
+  .st77{fill:#A0A0A0;}
+  .st78{fill:#767676;}
+  .st79{fill:#8D8D8D;}
+  .st80{fill:#575757;}
+  .st81{fill:#AAAAAA;}
+  .st82{fill:#9E9E9E;}
+  .st83{fill:#6F6F6F;}
+  .st84{fill:#3B3B3B;}
+  .st85{fill:#585858;}
+  .st86{fill:#4A4A4A;}
+  .st87{fill:#4C4C4C;}
+  .st88{fill:#868686;}
+  .st89{fill:#515151;}
+  .st90{fill:#969696;}
+  .st91{fill:#565656;}
+  .st92{fill:#A6A6A6;}
+  .st93{fill:#545454;}
+  .st94{fill:#303030;}
+  .st95{fill:#838383;}
+  .st96{fill:#A3A3A3;}
+  .st97{fill:#333333;}
+  .st98{fill:#242424;}
+
+  -->

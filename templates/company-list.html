@@ -48,13 +48,14 @@ Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).l
             <!-- ui-sref="tabs.companies.detail({companyNameId: c.compId})" -->
 
             <!-- http://lizzb.github.io/img/logos/carsdotcom/wide.png -->
-            <a href="#/iday/companies/{{c.id}}"  class="item item-avatar item-icon-right">
+            <a href="#/companies/{{c.id}}"  class="item item-avatar item-icon-right">
 
             <img src="http://placehold.it/60x60" ng-src="./img/logos/{{c.id}}/square.png" />
 
 
               
-             {{ c.name }}  <!-- <h2> <i></i> {{ c.name }}</h2> h2 makes it harder to fit on one line-->
+             {{ c.name }}
+             <!-- <h2> <i></i> {{ c.name }}</h2> h2 makes it harder to fit on one line-->
              <span class="item-note">{{ c.room }}</span>
 
 
@@ -81,6 +82,11 @@ Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).l
 </ion-footer-bar>
 
       </ion-view>
+
+
+
+
+
 
 
 <script type="text/ng-template" id="modal.html">

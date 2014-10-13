@@ -6,12 +6,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
     .state('sidemenu', {
-      url: "/iday",
+      url: "/",
       abstract: true,
       templateUrl: "templates/sidemenu.html",
     })
     .state('sidemenu.home', {
-      url: "/home",
+      url: "home",
       views: { 'menuContent' :{ templateUrl: "templates/home.html" } }
     })
     /*
@@ -31,48 +31,50 @@ app.config(function($stateProvider, $urlRouterProvider) {
     */
     
     .state('sidemenu.credits', {
-      url: "/credits",
+      url: "credits",
       views: { 'menuContent' :{ templateUrl: "templates/credits.html", controller: "MainCtrl" } } /*FilterSettingsCtrl*/
     })
 
     .state('sidemenu.feedback', {
-      url: "/feedback",
+      url: "feedback",
       views: { 'menuContent' :{ templateUrl: "templates/survey.html", controller: "SurveyCtrl" } } /*FilterSettingsCtrl*/
     })
     
     
 
-    
+    /*
     .state('sidemenu.settings', {
       url: "/settings",
-      views: { 'menuContent' :{ templateUrl: "templates/settings.html", controller: "MainCtrl" } } /*FilterSettingsCtrl*/
-    })
+      views: { 'menuContent' :{ templateUrl: "templates/settings.html", controller: "MainCtrl" } } /*FilterSettingsCtrl
+    })*/
     
     .state('sidemenu.companies', {
-      url: "/companies",
+      url: "companies",
       views: { 'menuContent' :{ templateUrl: "templates/company-list.html", controller: "CompanyListCtrl" } }
     })
     
     .state('sidemenu.company', {
-      url: "/companies/:companyId",
+      url: "companies/:companyId",
       resolve: { company: function($stateParams, CareerFairService) { return CareerFairService.getCompany($stateParams.companyId); },
       /*nextCompany: function($stateParams, CareerFairService) {return CareerFairService.getNextCompany($stateParams.companyId);}*/ },
       views: { 'menuContent' :{ templateUrl: "templates/company-detail.html", controller: "CompanyDetailCtrl" } }
     })
     
     .state('sidemenu.map', {
-      url: "/map",
+      url: "map",
       views: { 'menuContent' :{ templateUrl: "templates/map.html", controller: "CompanyMapCtrl" } }
     })
     
+    /* TODO - currently no specific action for this, should ideally center on booth
     // sidemenu.map.company'
     .state('sidemenu.booth', {
       url: "/map/:companyId",
       views: { 'menuContent' :{ templateUrl: "templates/map.html", controller: "CompanyMapCtrl" } }
     })
+*/
     
     
-    
+    /* alternate views
     .state('sidemenu.companies-grid', {
       url: "/companies-grid",
       views: { 'menuContent' :{ templateUrl: "templates/company-list-gridinfo.html", controller: "CompanyListCtrl" } }
@@ -81,13 +83,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('sidemenu.companies-verbose', {
       url: "/companies-verbose",
       views: { 'menuContent' :{ templateUrl: "templates/company-list-all-details.html", controller: "CompanyListCtrl" } }
-    })
+    })*/
 
 
 
   
   // Fall back on this URL otherwise
-  $urlRouterProvider.otherwise("/iday/companies");
+  $urlRouterProvider.otherwise("companies");
 });
 
 

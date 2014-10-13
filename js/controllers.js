@@ -1,4 +1,4 @@
-//
+// -------------------------------------------------------------
 //
 //
 //
@@ -139,59 +139,6 @@ app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate, AttendeesSer
 })
 
 
-app.controller('SurveyCtrl', function($scope) {
-  $scope.showForm = true;
-  /*
-$scope.convenientLocation.checked = "N/A";
-$scope.convenientTime.checked = "N/A";
-$scope.convenientDay.checked = "N/A";
-*/
-
-  $scope.shirtSizes = [
-    { text: 'Large', value: 'L' },
-    { text: 'Medium', value: 'M' },
-    { text: 'Small', value: 'S' }
-  ];
-  
-  $scope.survey_majors = [
-  { text: "Undecided", value: 'Und'},
-  { text: "Applied Math", value: 'AM'},
-  { text: "Biomedical Engineering", value: 'BME'},
-  { text: "Chemical Engineering", value: 'CHEM'},
-  { text: "Civil Engineering", value: 'CIV'},
-  { text: "Computer Engineering", value: 'CE'},
-  { text: "Computer Science (McCormick)", value: 'CS-BS'},
-  { text: "Computer Science (Weinberg)", value: 'CS-BA'},
-  { text: "Electrical Engineering", value: 'EE'},
-  { text: "MaDE", value: 'MADE'},
-  { text: "Material Science &amp; Engineering", value: 'MSE'},
-  { text: "Mechanical Engineering", value: 'MECH'},
-  { text: "Non-Engineering", value: 'NON'},
-  { text: "Not specified", value: 'NA'},
-  ];
-
-        /*<!--
-      <option>Economics</option>
-      <option>ISP</option>
-      <option>MMM</option>
-      <option>MSIT</option>
-      <option>MPDD</option>
-      <option>MSIA</option>
-      -->*/
-
-  $scope.response = {};
-  $scope.submit = function() {
-    
-    // if you want to force any fields to be mandatory indicate them here
-    /*if(!$scope.attendee.firstname) {
-      alert('Info required');
-      return;
-    }*/
-    $scope.showForm = false;
-    $scope.responses.push($scope.response);
-  };
-  
-})
 
 
 
@@ -203,33 +150,21 @@ $scope.convenientDay.checked = "N/A";
 app.controller('CompanyListCtrl', function($scope, $ionicScrollDelegate, $ionicModal) {
   //$scope.companies = companies;
   
-  $scope.toggleFavorite = function(company) {}; //{ $scope.companies.getCompanycompany.favorite = !company.favorite; };
+  $scope.toggleFavorite = function(company) {}; 
+  //{ $scope.companies.getCompanycompany.favorite = !company.favorite; };
   
-  $scope.clearSearch = function() {
-    $scope.searchString = '';
-  };
+  $scope.clearSearch = function() { $scope.searchString = ''; };
   
-  
-  $scope.scrollBottom = function() {
-    $ionicScrollDelegate.scrollBottom(true);
-  };
-  
-    $scope.scrollTop = function() {
-    $ionicScrollDelegate.scrollTop(true);
-  };
+  $scope.scrollBottom = function() { $ionicScrollDelegate.scrollBottom(true); };
+  $scope.scrollTop = function() { $ionicScrollDelegate.scrollTop(true); };
 
-  $ionicModal.fromTemplateUrl('modal.html', { //templates/settings
+  $ionicModal.fromTemplateUrl('templates/filter-modal.html', { //templates/settings
     scope: $scope
   }).then(function(modal) {$scope.modal = modal;})
 
-  $scope.openModal = function() {
-    console.log('modal opened');
-
-   $scope.modal.show();
-  };
-
+  //console.log('modal opened');
+  $scope.openModal = function() { $scope.modal.show(); };
   $scope.closeModal = function() { $scope.modal.hide() };
-
   $scope.$on('$destroy', function() { $scope.modal.remove()
   });
   
@@ -310,48 +245,86 @@ app.controller('CompanyMapCtrl', function($scope, $location) {
 
   // viewBox="{{startX}} {{startY}} {{mapWidth+100}} {{mapHeight+100}} "
 
-  
-  
-  
 })
 
 
 
+
+
+
+// -------------------------------------------------------------
+//
+// Feedback Survey
+//
+app.controller('SurveyCtrl', function($scope) {
+  $scope.showForm = true;
+  /*
+$scope.convenientLocation.checked = "N/A";
+$scope.convenientTime.checked = "N/A";
+$scope.convenientDay.checked = "N/A";
+*/
+/*
+  $scope.shirtSizes = [
+    { text: 'Large', value: 'L' },
+    { text: 'Medium', value: 'M' },
+    { text: 'Small', value: 'S' }
+  ];
+  */
+  
+  $scope.survey_majors = [
+  { text: "Undecided", value: 'Und'},
+  { text: "Applied Math", value: 'AM'},
+  { text: "Biomedical Engineering", value: 'BME'},
+  { text: "Chemical Engineering", value: 'CHEM'},
+  { text: "Civil Engineering", value: 'CIV'},
+  { text: "Computer Engineering", value: 'CE'},
+  { text: "Computer Science (McCormick)", value: 'CS-BS'},
+  { text: "Computer Science (Weinberg)", value: 'CS-BA'},
+  { text: "Electrical Engineering", value: 'EE'},
+  { text: "MaDE", value: 'MADE'},
+  { text: "Material Science &amp; Engineering", value: 'MSE'},
+  { text: "Mechanical Engineering", value: 'MECH'},
+  { text: "Non-Engineering", value: 'NON'},
+  { text: "Not specified", value: 'NA'},
+  ];
+
+        /*<!--
+      <option>Economics</option>
+      <option>ISP</option>
+      <option>MMM</option>
+      <option>MSIT</option>
+      <option>MPDD</option>
+      <option>MSIA</option>
+      -->*/
+
+  $scope.response = {}; // $scope.attendee = {};
+  $scope.submit = function() {
+    
+    // if you want to force any fields to be mandatory indicate them here
+    /*if(!$scope.attendee.firstname) {
+      alert('Info required');
+      return;
+    }*/
+    $scope.showForm = false;
+    $scope.responses.push($scope.response); //$scope.attendees.push($scope.attendee);
+  };
+  
+});
+
+
+/*
 //
 // Filter Settings
 //
 app.controller('FilterSettingsCtrl', function($scope) {
   
   
-})
-
+})*/
 
 
 
 /*
-//
-// Check-in
-//
-app.controller('CheckinCtrl', function($scope) {
-  $scope.showForm = true;
-  
-  $scope.shirtSizes = [
-    { text: 'Large', value: 'L' },
-    { text: 'Medium', value: 'M' },
-    { text: 'Small', value: 'S' }
-  ];
-  
-  $scope.attendee = {};
-  $scope.submit = function() {
-    if(!$scope.attendee.firstname) {
-      alert('Info required');
-      return;
-    }
-    $scope.showForm = false;
-    $scope.attendees.push($scope.attendee);
-  };
-  
-})
+
 
 
 

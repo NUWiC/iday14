@@ -96,42 +96,5 @@ Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).l
 
 
 
-
-
-<script type="text/ng-template" id="modal.html">
-    <div class="modal">
-      <ion-header-bar>
-        <h1 class="title">Filter Company List</h1>
-        <div class="buttons">
-          <button class="button button-clear icon ion-close" ng-click="closeModal()"></button>
-        </div>
-      </ion-header-bar>
-      <ion-content>
-
-      Companies matching your filters: {{companies = (allCompanies | filter:userFilter).length}} (of {{allCompanies.length}} total).
-
-      <div class="item item-divider"> Positions </div>
-        
-        <ion-checkbox ng-repeat="item in positions"
-                      ng-model="item.checked" 
-                      ng-checked="item.checked"
-                      ng-change="includePosition(item.name)">
-          {{ item.friendlyName }}
-        </ion-checkbox>
-
-<div class="item item-divider"> Majors </div>
-        
-        <ion-checkbox ng-repeat="item in majors"
-                      ng-model="item.checked" 
-                      ng-checked="item.checked"
-                      ng-change="includeMajor(item.name)">
-          {{ item.friendlyName }}
-        </ion-checkbox>
-
-      </ion-content>
-    </div>
-  </script>
-
-
 <!--div class="bar bar-footer bar-balanced">
   <div class="title">....centered....</div></div-->

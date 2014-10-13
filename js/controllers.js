@@ -150,6 +150,12 @@ app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate, AttendeesSer
 app.controller('CompanyListCtrl', function($scope, $ionicScrollDelegate, $ionicModal) {
   //$scope.companies = companies;
   
+  //$scope.sortProp = 'name'; 'booth'
+  //$scope.asc = 'false';
+  //$scope.sortProp
+  //sortProp='name'; asc=!asc"
+  // ng-model="searchString"
+
   $scope.toggleFavorite = function(company) {}; 
   //{ $scope.companies.getCompanycompany.favorite = !company.favorite; };
   

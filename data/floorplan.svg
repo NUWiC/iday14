@@ -1,9 +1,5 @@
 <svg width="1100" height="1435" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ 
-http://i.imgur.com/CKWe0M9.png
-
-  <image x="2" y="1" width="1093" height="1431" id="svg_1" xlink:href="http://i.imgur.com/ArXl22P.png"/>
--->
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
 
  <style>
 .booth {
@@ -13,6 +9,10 @@ http://i.imgur.com/CKWe0M9.png
   stroke-width: 5;
   stroke: #000000;
   fill: #FF0000;
+}
+
+.active {
+  fill: cyan;
 }
 
 .wall {
@@ -27,64 +27,78 @@ http://i.imgur.com/CKWe0M9.png
  </style>
  <g>
   <title>img</title>
-  <image x="2" y="1" width="1093" height="1431" id="svg_1" xlink:href="http://i.imgur.com/ArXl22P.png"/>
+  <image x="2" y="1" width="1093" height="1431" id="svg_1" xlink:href="http://i.imgur.com/CKWe0M9.png"/>
  </g>
  <g>
   <title>booths</title>
-  <rect id="svg_3" height="69" width="24" y="170" x="40" class="booth"/>
-  <rect id="svg_4" height="69" width="24" y="277" x="39" class="booth"/>
-  <rect id="svg_5" height="59" width="21" y="377" x="42" class="booth"/>
-  <rect id="svg_6" height="69" width="21" y="460" x="42" class="booth"/>
-  <rect id="svg_7" height="65" width="23" y="582" x="38" class="booth"/>
-  <rect id="svg_8" height="57" width="25" y="227" x="266" class="booth"/>
-  <rect id="svg_9" height="66" width="31" y="223" x="315" class="booth"/>
-  <rect id="svg_10" height="64" width="24" y="312" x="265" class="booth"/>
-  <rect id="svg_11" height="69" width="27" y="314" x="318" class="booth"/>
-  <rect id="svg_12" height="65" width="25" y="410" x="262" class="booth"/>
-  <rect id="svg_13" height="62" width="31" y="411" x="317" class="booth"/>
-  <rect id="svg_14" height="21" width="74" y="38" x="319" class="booth"/>
-  <rect id="svg_15" height="32" width="62" y="34" x="524" class="booth"/>
-  <rect id="svg_16" height="29" width="64" y="37" x="654" class="booth"/>
-  <rect id="svg_17" height="69" width="20" y="201" x="770" class="booth"/>
-  <rect id="svg_18" height="69" width="20" y="201.5" x="826.5" class="booth"/>
-  <rect id="svg_20" height="69" width="20" y="313.5" x="770.5" class="booth"/>
-  <rect id="svg_21" height="69" width="20" y="312.5" x="826.5" class="booth"/>
-  <rect id="svg_22" height="69" width="20" y="408.5" x="772.5" class="booth"/>
-  <rect id="svg_23" height="69" width="20" y="405.5" x="824.5" class="booth"/>
-  <rect id="svg_24" height="69" width="20" y="160.5" x="1034.5" class="booth"/>
-  <rect stroke="dodgerblue" id="svg_25" height="69" width="20" y="258.510283" x="1035.343193" class="booth"/>
-  <rect id="svg_26" height="69" width="20" y="354.407455" x="1035.886955" class="booth"/>
-  <rect id="svg_27" height="69" width="20" y="444.381737" x="1034.60154" class="booth"/>
-  <rect id="svg_28" height="69" width="20" y="558.777626" x="1033.316185" class="booth"/>
-  <rect id="svg_29" height="69" width="20" y="260.577089" x="489.614418" class="booth"/>
-  <rect id="svg_30" height="69" width="20" y="260.577124" x="546.169655" class="booth"/>
-  <rect id="svg_31" height="69" width="20" y="374.973022" x="488.329018" class="booth"/>
-  <rect id="svg_32" height="69" width="20" y="377.543716" x="544.884315" class="booth"/>
-  <rect transform="rotate(36.501495361328125 986.5466918945312,67.99913024902348) " id="svg_33" height="21" width="74" y="57.499125" x="949.546715" class="booth"/>
-  <rect id="svg_34" transform="rotate(-52.431358337402344 69.66583251953124,85.13708496093749) " height="21" width="74" y="74.637084" x="32.665834" class="booth"/>
-  <rect id="svg_35" height="21" width="74" y="751.586578" x="66.941723" class="booth"/>
-  <rect id="svg_36" height="21" width="74" y="749.872803" x="301.731791" class="booth"/>
-  <rect id="svg_37" height="21" width="74" y="772.15213" x="634.208242" class="booth"/>
-  <rect transform="rotate(-42.87874984741211 1005.3984375000001,762.0866088867186) " id="svg_38" height="21" width="74" y="751.586598" x="968.398448" class="booth"/>
-  <rect id="svg_39" height="21" width="74" y="874.979885" x="277.73863" class="booth"/>
-  <rect id="svg_40" height="21" width="74" y="847.559143" x="18.955404" class="booth"/>
-  <rect id="svg_41" height="21" width="74" y="845.845352" x="675.339346" class="booth"/>
-  <rect id="svg_42" height="21" width="74" y="972.666264" x="202.331594" class="booth"/>
-  <rect id="svg_43" height="21" width="74" y="976.093857" x="317.155943" class="booth"/>
-  <rect id="svg_44" height="21" width="74" y="977.807652" x="582.794348" class="booth"/>
-  <rect id="svg_45" height="21" width="74" y="977.807652" x="709.615255" class="booth"/>
-  <rect id="svg_46" height="21" width="74" y="979.521446" x="841.577566" class="booth"/>
-  <rect id="svg_47" height="21" width="74" y="842.417758" x="968.398468" class="booth"/>
-  <rect id="svg_48" height="21" width="74" y="977.807652" x="961.543295" class="booth"/>
-  <rect id="svg_49" height="21" width="74" y="1049.787086" x="745.604971" class="booth"/>
-  <rect transform="rotate(-89.99996948242188 258.18334960937506,1207.673583984375) " id="svg_50" height="21" width="74" y="1197.173557" x="221.183371" class="booth"/>
-  <rect transform="rotate(-35.166343688964844 273.60754394531267,1062.0008544921875) " id="svg_51" height="21" width="74" y="1051.500836" x="236.607526" class="booth"/>
-  <rect transform="rotate(87.83900451660156 876.8637695312499,1195.6768798828125) " id="svg_52" height="21" width="74" y="1185.176936" x="839.86376" class="booth"/>
-  <rect id="svg_53" transform="rotate(87.83900451660156 575.2356567382812,1212.81494140625) " height="21" width="74" y="1202.314967" x="538.235647" class="booth"/>
-  <rect transform="rotate(-91.9415054321289 486.1182556152346,1214.5286865234377) " id="svg_54" height="21" width="74" y="1204.028702" x="449.118246" class="booth"/>
-  <rect transform="rotate(55.244117736816406 280.4627075195319,1365.3427734374998) " id="svg_55" height="21" width="74" y="1354.842739" x="243.462708" class="booth"/>
-  <rect transform="rotate(-47.174739837646484 816.8809204101564,1346.4909667968748) " id="svg_56" height="21" width="74" y="1335.990982" x="779.880911" class="booth"/>
+
+
+  <rect id="booth10" height="21" width="74" y="875" x="277.7" class="booth"/>
+  <rect id="booth11" height="21" width="74" y="847.5" x="19" class="booth"/>
+  <rect id="booth12" height="21" width="74" y="972.6" x="202" class="booth"/>
+  <rect id="booth13" height="21" width="74" y="976" x="317" class="booth"/>
+  <rect id="booth14" height="21" width="74" y="977.8" x="583" class="booth"/>
+  <rect id="booth15" height="21" width="74" y="845.8" x="675" class="booth"/>
+  <rect id="booth16" height="21" width="74" y="977.8" x="710" class="booth"/>
+  <rect id="booth17" height="21" width="74" y="979.5" x="841.5" class="booth"/>
+  <rect id="booth18" height="21" width="74" y="842" x="968" class="booth"/>
+  <rect id="booth19" height="21" width="74" y="977.8" x="961.5" class="booth"/>
+
+  <rect id="booth20" transform="rotate(87.83900451660156 575.2356567382812,1212.81494140625) " height="21" width="74" y="1202.314967" x="538.235647" class="booth"/>
+  <rect id="booth21" height="21" width="74" y="1050" x="745.6" class="booth"/>
+  <rect id="booth22"  transform="rotate(90 876.8637695312499,1195.6768798828125) " height="21" width="74" y="1185" x="840" class="booth"/>
+  <rect id="booth23" transform="rotate(-47 816.8809204101564,1346.4909667968748) " height="21" width="74" y="1336" x="780" class="booth"/>
+  <rect id="booth24" transform="rotate(55 280.4627075195319,1365.3427734374998) "  height="21" width="74" y="1355" x="243.4" class="booth"/>
+  <rect id="booth25"  transform="rotate(-90 258.18334960937506,1207.673583984375) " height="21" width="74" y="1197" x="221" class="booth"/>
+  <rect  id="booth26" transform="rotate(-35 273.60754394531267,1062.0008544921875) " height="21" width="74" y="1051.5" x="236.6" class="booth"/>
+  <rect id="booth27" transform="rotate(-90 486.1182556152346,1214.5286865234377) " height="21" width="74" y="1204" x="449" class="booth"/>
   
+
+  <rect id="booth32" height="69" width="20" y="558.777626" x="1033.316185" class="booth"/>
+  <rect id="booth33" height="69" width="20" y="444.381737" x="1034.60154" class="booth"/>
+  <rect id="booth34" height="69" width="20" y="354.407455" x="1035.886955" class="booth"/>
+  <rect id="booth35" height="69" width="20" y="258.510283" x="1035.343193" class="booth"/>
+  <rect id="booth36" height="69" width="20" y="160.5" x="1034.5" class="booth"/>
+
+  <rect id="booth38" height="29" width="64" y="37" x="654" class="booth"/>
+  <rect id="booth39" height="32" width="62" y="34" x="524" class="booth"/>
+
+  <rect id="booth40" height="21" width="74" y="38" x="319" class="booth"/>
+
+  <rect id="booth42" height="69" width="24" y="170" x="40" class="booth"/>
+  <rect id="booth43" height="69" width="24" y="277" x="39" class="booth"/>
+  <rect id="booth44" height="59" width="21" y="377" x="42" class="booth"/>
+  <rect id="booth45" height="69" width="21" y="460" x="42" class="booth"/>
+  <rect id="booth46" height="65" width="23" y="582" x="38" class="booth"/>
+  <rect id="booth47" height="65" width="25" y="410" x="262" class="booth"/>
+  <rect id="booth48" height="64" width="24" y="312" x="265" class="booth"/>
+  <rect id="booth49" height="57" width="25" y="227" x="266" class="booth"/>
+
+  <rect id="booth50" height="66" width="31" y="223" x="315" class="booth"/>
+  <rect id="booth51" height="69" width="27" y="314" x="318" class="booth"/>
+  <rect id="booth52" height="62" width="31" y="411" x="317" class="booth"/>
+  <rect id="booth53" height="69" width="20" y="375" x="488" class="booth"/>
+  <rect id="booth54" height="69" width="20" y="260.5" x="490" class="booth"/>
+  <rect id="booth55" height="69" width="20" y="260.5" x="545" class="booth"/>
+  <rect id="booth56" height="69" width="20" y="377.5" x="545" class="booth"/>
+  <rect id="booth57" height="69" width="20" y="408.5" x="772.5" class="booth"/>
+  <rect id="booth58" height="69" width="20" y="313.5" x="770.5" class="booth"/>
+  <rect id="booth59" height="69" width="20" y="201" x="770" class="booth"/>
+
+  <rect id="booth60" height="69" width="20" y="201.5" x="826.5" class="booth"/>
+  <rect id="booth61" height="69" width="20" y="312.5" x="826.5" class="booth"/>
+  <rect id="booth62" height="69" width="20" y="405.5" x="824.5" class="booth"/>
+
+
+
+  <rect id="booth37" transform="rotate(36.5 986.5466918945312,67.99913024902348) " height="21" width="74" y="57.5" x="950" class="booth"/>
+  <rect id="booth41" transform="rotate(-52.4 69.66583251953124,85.13708496093749) " height="21" width="74" y="74.6" x="32.6" class="booth"/>
+
+  <rect id="booth28" height="21" width="74" y="751.5" x="67" class="booth"/>
+  <rect id="booth29" height="21" width="74" y="750" x="302" class="booth"/>
+  <rect id="booth30" height="21" width="74" y="772" x="634" class="booth"/>
+  <rect id="booth31" transform="rotate(-42.8 1005.3984375000001,762.0866088867186) "  height="21" width="74" y="751.5" x="968" class="booth"/>
+
 
 
  

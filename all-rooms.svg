@@ -138,16 +138,6 @@ svg {background: lightgrey; }
 
 <text stroke="#000000" fill="#000000" stroke-width="0" x="360" y="1103" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" transform="matrix(0.9757868429625913,0,0,0.8719121886798789,161.46109724516543,184.55850812316598) " id="svg_79">Lakeshore Room</text>
 
-  </g>
- </g>
-
-
- <g display="inline">
-  <title>newbooths</title>
-  
-  
-
-  <path fill-opacity="0" id="svg_89" d="m1049.333008,98.333298l-211.999695,-2.333298l-2.666626,-888l421.333313,0l0,482.666992l200,0l-186.666992,77.333008l205.333984,0l0,306.666687l-149.333984,-2.666702l-272,2.666702l-4,23.666595l0,0.000015z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="hotpink" fill="#000000"/>
 
 
 
@@ -161,5 +151,9 @@ svg {background: lightgrey; }
 <line class="wall" id="svg_98" y2="-319" x2="428" y1="-800" x1="428"/>
 <line class="wall" id="svg_99" y2="87" x2="22" y1="-799" x1="22"/>
 <line class="wall" x1="652" y1="-240" x2="652" y2="71" id="svg_92"/>
+
+
+  </g>
  </g>
+
 </svg>

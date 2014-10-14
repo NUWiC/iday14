@@ -1,5 +1,9 @@
 <svg width="1100" height="1435" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ 
+http://i.imgur.com/CKWe0M9.png
+
+  <image x="2" y="1" width="1093" height="1431" id="svg_1" xlink:href="http://i.imgur.com/ArXl22P.png"/>
+-->
 
  <style>
 .booth {
@@ -124,9 +128,9 @@
   <line id="svg_75" y2="1391.906617" x2="703.770366" y1="1427.896334" x1="731.191104" class="wall"/>
   <line id="svg_76" y2="1390.192811" x2="420.993999" y1="1426.182528" x1="448.414737" class="wall"/>
 
-  <path id="svg_58" d="m7.112296,825.497009l-0.257112,-822.069417l1084.832926,-1.713796l0,824.335887l-205.655579,-1.713806l15.424194,-34.275879l-130.248474,0l17.137939,35.989685l-781.233896,-0.552673z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="dodgerblue" fill="none"/>
+  <path class="roomOutline" id="northshore_roomOutline" d="m7.112296,825.497009l-0.257112,-822.069417l1084.832926,-1.713796l0,824.335887l-205.655579,-1.713806l15.424194,-34.275879l-130.248474,0l17.137939,35.989685l-781.233896,-0.552673z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="dodgerblue" fill="none"/>
 
-  <path id="svg_77" d="m452.69928,1019.155945l-221.336807,-1.161072l0,406.169678l675.235672,0l0,-411.311096l-339.331665,-1.713806l34.27594,46.272461l-186.803772,-1.713745l37.960632,-36.542419z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="hotpink" fill="none"/>
+  <path class="roomOutline" id="lakeshore_roomOutline" d="m452.69928,1019.155945l-221.336807,-1.161072l0,406.169678l675.235672,0l0,-411.311096l-339.331665,-1.713806l34.27594,46.272461l-186.803772,-1.713745l37.960632,-36.542419z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="hotpink" fill="none"/>
 
   <text stroke="#000000" transform="matrix(1.1191343069076538,0,0,1,-33.64427286013961,0) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_78" y="868.341882" x="368.723276" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Northshore Room</text>
   <text id="svg_79" stroke="#000000" transform="matrix(1.1191343069076536,0,0,1,178.0052632726729,0.7601555585861206) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="1103.131952" x="359.535124" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Lakeshore Room</text>

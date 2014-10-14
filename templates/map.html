@@ -28,6 +28,8 @@
   stroke-linejoin: null;
   stroke-dasharray: null;
 }
+.tooltip { display:inline; opacity:0.85; fill: #fff; stroke: lime; stroke-width: 1;}
+
 </style>
 
 
@@ -71,11 +73,41 @@ use for positioning booths and shiz
     <g>
       <title> Booths </title>
 
-    <g ng-repeat="b in booths" ng-click="go('/companies/{{b.compId}}')">
+      <!-- ng-click="go('/companies/{{b.compId}}')" -->
+    <g ng-repeat="b in booths" ng-click="tooltipIsVisible = !tooltipIsVisible">
       
     <!-- this still throws errors in console, but it does exactly what i want so... shrug -->
       
     <g ng-attr-transform="translate({{b.x}}, {{b.y}})">
+
+<g id="{{b.compId}}-tooltip" ng-show="tooltipIsVisible" ng-click="go('/companies/{{b.compId}}')">
+        <path id="tooltip" fill="#fff"
+              d="
+              M -35, -75
+              L  90, -75
+              L  90,-10 
+              L  38,-10 
+              L  30,-3 
+              L  22,-10 
+              L -35,-10 Z"></path>       
+        <text x="-20" y="-27" class="tooltip-label"> Booth # {{b.bNum}} </text>
+        <text x="-20" y="-13" class="tooltip-label"> Click for details </text>
+        <image class="compLogo" 
+             x="-30" y="-70"
+             width="120" height="30"
+             ng-xlink-href="./img/logos/{{b.compId}}/wide.png" 
+             xlink:href=""/>
+      </g>
+
+
+
+
+    <text class="boothlabel compId boothNumId" 
+                ng-attr-x="25"
+                ng-attr-y="5">
+            {{b.bNum}}        
+          </text>
+
     <g ng-attr-transform="rotate({{b.rotate}},0,0)">
         <rect class="booth"
               ng-attr-id="{{b.compId}}"
@@ -100,11 +132,7 @@ use for positioning booths and shiz
           
       
       </g><!-- for rotate -->
-      <text class="boothlabel compId boothNumId" 
-                ng-attr-x="25"
-                ng-attr-y="5">
-            {{b.bNum}}        
-          </text>
+      
     </g><!-- /g for transform translate -->
     </g><!-- /g for each booth -->
      

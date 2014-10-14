@@ -5,8 +5,8 @@
 app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate, AttendeesService, CareerFairService) {
   
   $scope.responses = {};
-  console.log($scope.responses);
-  $scope.attendees = AttendeesService.getAttendees();
+ // console.log($scope.responses);
+ // $scope.attendees = AttendeesService.getAttendees();
   
   // Make sure that you link the booth and company info prior to 
   // brining the company info into the main controller

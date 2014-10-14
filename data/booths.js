@@ -3,7 +3,11 @@
  // that way compId, which is used for accessing picture folders and in urls,
  //  is assigned in only 1 file/table/js array (the grid)
 
+var boothWidth = 75;
+var boothHeight = 30;
+
 var booth_info = [
+    
 {bNum:1,room:"The Grill",x:10,y:10,rotate:0, floor:1},
 {bNum:2,room:"The Grill",x:10,y:10,rotate:0, floor:1},
 {bNum:3,room:"The Grill",x:10,y:10,rotate:0, floor:1},
@@ -34,10 +38,10 @@ var booth_info = [
 {bNum:26,room:"Lakeshore",x:236.6,y:1052,rotate:-35, floor:1},
 {bNum:27,room:"Lakeshore",x:449,y:1204,rotate:-90, floor:1},
 
-{bNum:28,room:"Northshore",x:67,y:751.5,rotate:0, floor:1},
-{bNum:29,room:"Northshore",x:302,y:750,rotate:0, floor:1},
-{bNum:30,room:"Northshore",x:634,y:772,rotate:0, floor:1},
-{bNum:31,room:"Northshore",x:968,y:751.5,rotate:-42, floor:1},
+{bNum:28,room:"Northshore",x:175,y:750,rotate:0, floor:1},
+{bNum:29,room:"Northshore",x:375,y:750,rotate:0, floor:1},
+{bNum:30,room:"Northshore",x:575,y:750,rotate:0, floor:1},
+{bNum:31,room:"Northshore",x:950,y:755,rotate:-42, floor:1},
     
 {bNum:32,room:"Northshore",x:1035,y:560,rotate:90, floor:1},
 {bNum:33,room:"Northshore",x:1035,y:460,rotate:90, floor:1},
@@ -63,26 +67,28 @@ var booth_info = [
     
 
     
-{bNum:47,room:"Northshore",x:285,y:415,rotate:90, floor:1},
-{bNum:48,room:"Northshore",x:285,y:320,rotate:90, floor:1},
-{bNum:49,room:"Northshore",x:285,y:225,rotate:90, floor:1},
+{bNum:47,room:"Northshore",x:285,y:435,rotate:90, floor:1},
+{bNum:48,room:"Northshore",x:285,y:340,rotate:90, floor:1},
+{bNum:49,room:"Northshore",x:285,y:245,rotate:90, floor:1},
     
-{bNum:57,room:"Northshore",x:795,y:415,rotate:90, floor:1},
-{bNum:58,room:"Northshore",x:795,y:320,rotate:90, floor:1},
-{bNum:59,room:"Northshore",x:795,y:225,rotate:90, floor:1},
+{bNum:57,room:"Northshore",x:795,y:435,rotate:90, floor:1},
+{bNum:58,room:"Northshore",x:795,y:340,rotate:90, floor:1},
+{bNum:59,room:"Northshore",x:795,y:245,rotate:90, floor:1},
     
-{bNum:50,room:"Northshore",x:315,y:300,rotate:-90, floor:1},
-{bNum:51,room:"Northshore",x:315,y:395,rotate:-90, floor:1},
-{bNum:52,room:"Northshore",x:315,y:490,rotate:-90, floor:1},
+{bNum:50,room:"Northshore",x:315,y:320,rotate:-90, floor:1},
+{bNum:51,room:"Northshore",x:315,y:415,rotate:-90, floor:1},
+{bNum:52,room:"Northshore",x:315,y:510,rotate:-90, floor:1},
     
-{bNum:60,room:"Northshore",x:825,y:300,rotate:-90, floor:1},
-{bNum:61,room:"Northshore",x:825,y:395,rotate:-90, floor:1},
-{bNum:62,room:"Northshore",x:825,y:490,rotate:-90, floor:1},    
+{bNum:60,room:"Northshore",x:825,y:320,rotate:-90, floor:1},
+{bNum:61,room:"Northshore",x:825,y:415,rotate:-90, floor:1},
+{bNum:62,room:"Northshore",x:825,y:510,rotate:-90, floor:1},    
     
-{bNum:53,room:"Northshore",x:535,y:375,rotate:90, floor:1},
-{bNum:54,room:"Northshore",x:535,y:270,rotate:90, floor:1},
-{bNum:55,room:"Northshore",x:565,y:345,rotate:-90, floor:1},
-{bNum:56,room:"Northshore",x:565,y:450,rotate:-90, floor:1},
+{bNum:53,room:"Northshore",x:545,y:375,rotate:90, floor:1},
+{bNum:54,room:"Northshore",x:545,y:270,rotate:90, floor:1},
+{bNum:55,room:"Northshore",x:575,y:345,rotate:-90, floor:1},
+{bNum:56,room:"Northshore",x:575,y:450,rotate:-90, floor:1},
+
+
 
 ];
 

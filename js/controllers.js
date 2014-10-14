@@ -184,20 +184,16 @@ app.controller('CompanyDetailCtrl', function($scope, company) {
   $scope.company = company;
 })
 
-
+// need to use a factory or something, loading this takes sooo sloowwlyy
 // -------------------------------------------------------------
-//
+// http://codepen.io/lizz/pen/nKuLm?editors=101
 // Company Map / Booth Floorplan Layout
 //
 app.controller('CompanyMapCtrl', function($scope, $location) {
   
-// need to use a factory or something, loading this takes sooo sloowwlyy
 
   $scope.go = function ( path ) { $location.path( path ); };
 
-  /*$scope.hasRotation = function(booth) {
-        return booth.hasOwnProperty('rotate');
-    }*/
   $scope.rotateBooth = function (boothRotation) {
     var degrees = 0;
       if(boothRotation != null) degrees = boothRotation;
@@ -205,53 +201,32 @@ app.controller('CompanyMapCtrl', function($scope, $location) {
   };
   
 
-  $scope.bWidth = 60; // boothWidth
-  $scope.bHeight = 60; // boothHeight
+  //$scope.bWidth = 60; // boothWidth
+  //$scope.bHeight = 60; // boothHeight
+
+  $scope.bWidth = 70; // boothWidth
+  $scope.bHeight = 20; // boothHeight
   
-  // {{startX - 20}} {{startY - 20}} {{mapWidth + 20}} {{mapHeight + 20}}"
+  $scope.roomTitle = "Industry Day 2014 Layout";  
+  
+$scope.roomOutline = "m7.112296,825.497009l-0.257112,-822.069417l1084.832926,-1.713796l0,824.335887l-205.655579,-1.713806l15.424194,-34.275879l-130.248474,0l17.137939,35.989685l-781.233896,-0.552673z M452.69928,1019.155945l-221.336807,-1.161072l0,406.169678l675.235672,0l0,-411.311096l-339.331665,-1.713806l34.27594,46.272461l-186.803772,-1.713745l37.960632,-36.542419z";
   
   
-  // values specific to hilton orrington
-  $scope.startX = 80;
-  $scope.startY = -200;
-  $scope.mapWidth = 1250;
-  $scope.mapHeight = 2100;
-  
-  //var xMin = 0;
-  //var xMax = 0;
-  //var yMin = 0;
-  //var yMax = 0;
 
-/*
-  if ($scope.companies.length > 0) {
-    xMin = $scope.companies[0].x;
-    xMax = $scope.companies[0].x;
-    yMin = $scope.companies[0].y;
-    yMax = $scope.companies[0].y;
-  }
+ 
+ // values specific to THIS floorplan svg image
+// i have code to calculate the size of the canvase as well
+// and account for case that theres weirdly just 1 booth
+// but keeping it fixed for now
+  $scope.startX = -20;
+  $scope.startY = -4;
+  $scope.mapWidth = 1095 + 40; //93
+  $scope.mapHeight = 1431;
+  // add any padding HERE, not in the view!
+    // {{startX - 20}} {{startY - 20}} {{mapWidth + 20}} {{mapHeight + 20}}"
 
-  for (var i = 0; i < $scope.companies.length; i++) {
-    var boothPos = $scope.companies[i];
-    if (boothPos.x < xMin) xMin = boothPos.x;
-    if (boothPos.x > xMax) xMax = boothPos.x;
-    if (boothPos.y < yMin) yMin = boothPos.y;
-    if (boothPos.y > yMax) yMax = boothPos.y;
-  }*/
 
-// this this is outdated......
- /* $scope.startX = xMin;
-  $scope.startY = yMin;
-  $scope.mapWidth = xMax - xMin + $scope.boothWidth;
-  $scope.mapHeight = yMax - yMin + $scope.boothHeight;
-  */
-    // viewBox="-100 150 1500 400"
-  //  $scope.paddingV = 10;
-  //   $scope.paddingH = 10;
-  // {{mapWidth+paddingH}} {{mapHeight+paddingV}}
-
-  // viewBox="{{startX}} {{startY}} {{mapWidth+100}} {{mapHeight+100}} "
-
-})
+});
 
 
 

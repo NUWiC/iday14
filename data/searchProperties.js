@@ -27,12 +27,11 @@ var majors_list = [
   { friendlyName: 'MaDE', name: 'made'},
   { friendlyName: 'MatSci - Material Science', name:'matsci' },
   { friendlyName: 'MechE - Mechanical Engineering', name: 'mech' },
-  { friendlyName: 'Non-engineering', name: 'non' }
-  //{ friendlyName: 'Non-engineering', name: 'noneng' }
+  { friendlyName: 'Non-engineering', name: 'non' } //name: 'noneng' }
 ];
 
 
-
+// Industries list from McCormick Connect / CSO /MyInterfase
 //var industry_categories_list = [
 var industries_list = [  
 "Accounting",

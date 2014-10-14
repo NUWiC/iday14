@@ -1,52 +1,63 @@
+// Define a new module for our app. 
+// The array holds the names of dependencies if any.
 //angular.module('idayIonic.filters', [])
+//'idayFilters'   //'idayIonic.idayFilters'
 
 
 //http://stackoverflow.com/questions/15266671/angular-ng-repeat-in-reverse
+
 app.filter('reverse', function() {
   return function(items) {
     return items.slice().reverse();
   };
 });
 
-// All filters must return a function. The first parameter
-// is the data that is to be filtered, and the second is
-// an argument that may be passed with a colon
+
+// From phonecat angularJS tutorial
+app.filter('checkmark', function() {
+  return function(input) {
+    // check unicode symbol if true, x unicode symbol if false
+    return input ? '\u2713' : '\u2718';
+  };
+});
+
+
+// http://tutorialzine.com/2013/08/learn-angularjs-5-examples/
+
+// All filters must return a function.
+// Param 1: the data to be filtered, 
+// Param 2: an argument that may be passed with a colon
 // (searchFor:searchString)
 app.filter('instantNameSearch', function(){
 
-	return function(list, searchString){
+	return function(list, query){ //searchString --> query
 
-		if(!searchString){ return list; }
+		if(!query){ return list; }
 		var result = [];
-		searchString = searchString.toLowerCase();
+		query = query.toLowerCase();
 
 		// Using the forEach helper method to loop through the array
 		angular.forEach(list, function(item){
 		
-    // only searches the name, not the description!!
-    // make sure to change the property of what you're searching here....
-    if(item.name.toLowerCase().indexOf(searchString) !== -1){
+    // NOTE: Only searches the name, not the description!!
+    // make sure to change the property
+    // of what you're searching here....
+      if(item.name.toLowerCase().indexOf(query) !== -1)
+      {
 				result.push(item);
-			}
-
+      }
 		});
 
 		return result;
 	};
 
-});//; //;
+});
 
 
-
-app.filter('checkmark', function() {
-  return function(input) {
-    // check symbol if true, x if false
-    return input ? '\u2713' : '\u2718';
-  };
-});//;
-
-
-
+//
+// This directive enables images to load
+// in the angular-generated svg
+//
 app.directive('ngXlinkHref', function () {
   return {
     priority: 99,
@@ -54,14 +65,13 @@ app.directive('ngXlinkHref', function () {
     link: function (scope, element, attr) {
       var attrName = 'xlink:href';
       attr.$observe('ngXlinkHref', function (value) {
-        if (!value)
-          return;
-
+        if (!value) return;
         attr.$set(attrName, value);
       });
     }
   };
 });
+
 
 /*
 // http://jsfiddle.net/mrajcok/5ttQA/
@@ -71,34 +81,12 @@ app.directive('ngIf', function() {
             if(scope.$eval(attrs.ngIf)) {
                 // remove '<div ng-if...></div>'
                 element.replaceWith(element.children())
-            } else {
-                element.replaceWith('')
             }
+            else {  element.replaceWith('');  }
         }
     }
 });*/
 
 
 
-//'use strict';
 
-/* Filters 
-
-// Define a new module for our app. 
-// The array holds the names of dependencies if any.
-// var app = a
-//angular.module('idayFilters', []) //;
-
-//angular.module('idayIonic.idayFilters', [])
-
-// All filters must return a function.
-// Param 1: the data to be filtered, 
-// Param 2: an argument that may be passed 
-// http://tutorialzine.com/2013/08/learn-angularjs-5-examples/
-
-//app.filter
-.filter('checkmark', function() {
-  return function(input) {
-    return input ? '\u2713' : '\u2718';
-  };
-});*/

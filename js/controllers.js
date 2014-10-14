@@ -16,20 +16,19 @@ app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate, AttendeesSer
 
   //$scope.floorplan = CareerFairService.getBooths(); //getBoothLayout();
   
-  // pull from data.js
+  // --- use data from searchProperties.js --- //
   $scope.majors = majors_list;
   $scope.positions = positions_list;
- 
- $scope.allCompanies = CareerFairService.getCompanies();
+
+  $scope.allCompanies = CareerFairService.getCompanies();
 
  // filter this one by user prefs... filtering makes a new array anyway but just testing shiz
- $scope.companies = $scope.allCompanies; //CareerFairService.getCompanies();
+ $scope.companies = $scope.allCompanies; 
+ //CareerFairService.getCompanies();
  //$scope.booths = CareerFairService.getBooths();
  
- //  console.log("companies 1 2 3", $scope.companies[0], $scope.companies[1], $scope.companies[2]);
  
   $scope.booths = CareerFairService.getBooths();
-  //console.log("booths 1 2 3", $scope.booths[0], $scope.booths[1], $scope.booths[2]);
   
   //for (var i = 0; i < $scope.booths.length; i++) {
   //   booths[i].id = "booth"+bNum; // Assign element id's for svg/html
@@ -130,8 +129,8 @@ app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate, AttendeesSer
         return;
     }
 
-    //$scope.filteredList = (companies |filter:userFilter);
-//http://plnkr.co/edit/hXOeZvHjpHOulIhD7s2Y?p=preview
+  //$scope.filteredList = (companies |filter:userFilter);
+  //http://plnkr.co/edit/hXOeZvHjpHOulIhD7s2Y?p=preview
   //http://jsfiddle.net/TahmidTanzim/N9Vqk/
   // http://blog.tompawlak.org/use-filter-in-controller-angularjs
   // http://stackoverflow.com/questions/14302267/how-to-use-a-filter-in-a-controller
@@ -184,114 +183,12 @@ app.controller('CompanyDetailCtrl', function($scope, company) {
   $scope.company = company;
 })
 
-// need to use a factory or something, loading this takes sooo sloowwlyy
-// -------------------------------------------------------------
-// http://codepen.io/lizz/pen/nKuLm?editors=101
-// Company Map / Booth Floorplan Layout
-//
-app.controller('CompanyMapCtrl', function($scope, $location) {
-  
-
-  $scope.go = function ( path ) { $location.path( path ); };
-
-  $scope.rotateBooth = function (boothRotation) {
-    var degrees = 0;
-      if(boothRotation != null) degrees = boothRotation;
-      return "rotate("+degrees+", 0, 0);";
-  };
-  
-  // these variables defined in booths.js
-  $scope.bWidth = boothWidth;
-  $scope.bHeight = boothHeight;
-  //$scope.bWidth = 60; // boothWidth
-  //$scope.bHeight = 60; // boothHeight
-
-  //$scope.bWidth = 70; // boothWidth
-  //$scope.bHeight = 20; // boothHeight
-  
-  $scope.roomTitle = "Industry Day 2014 Layout";  
-  $scope.roomOutline = "m7.112296,825.497009l-0.257112,-822.069417l1084.832926,-1.713796l0,824.335887l-205.655579,-1.713806l15.424194,-34.275879l-130.248474,0l17.137939,35.989685l-781.233896,-0.552673z M452.69928,1019.155945l-221.336807,-1.161072l0,406.169678l675.235672,0l0,-411.311096l-339.331665,-1.713806l34.27594,46.272461l-186.803772,-1.713745l37.960632,-36.542419z";
-  
-  
-
- 
- // values specific to THIS floorplan svg image
-// i have code to calculate the size of the canvase as well
-// and account for case that theres weirdly just 1 booth
-// but keeping it fixed for now
-  $scope.startX = -20;
-  $scope.startY = -4;
-  $scope.mapWidth = 1095 + 40; //93
-  $scope.mapHeight = 1431;
-  // add any padding HERE, not in the view!
-    // {{startX - 20}} {{startY - 20}} {{mapWidth + 20}} {{mapHeight + 20}}"
-
-
-});
 
 
 
 
 
 
-// -------------------------------------------------------------
-//
-// Feedback Survey
-//
-app.controller('SurveyCtrl', function($scope) {
-  $scope.showForm = true;
-  /*
-$scope.convenientLocation.checked = "N/A";
-$scope.convenientTime.checked = "N/A";
-$scope.convenientDay.checked = "N/A";
-*/
-/*
-  $scope.shirtSizes = [
-    { text: 'Large', value: 'L' },
-    { text: 'Medium', value: 'M' },
-    { text: 'Small', value: 'S' }
-  ];
-  */
-  
-  $scope.survey_majors = [
-  { text: "Undecided", value: 'Und'},
-  { text: "Applied Math", value: 'AM'},
-  { text: "Biomedical Engineering", value: 'BME'},
-  { text: "Chemical Engineering", value: 'CHEM'},
-  { text: "Civil Engineering", value: 'CIV'},
-  { text: "Computer Engineering", value: 'CE'},
-  { text: "Computer Science (McCormick)", value: 'CS-BS'},
-  { text: "Computer Science (Weinberg)", value: 'CS-BA'},
-  { text: "Electrical Engineering", value: 'EE'},
-  { text: "MaDE", value: 'MADE'},
-  { text: "Material Science &amp; Engineering", value: 'MSE'},
-  { text: "Mechanical Engineering", value: 'MECH'},
-  { text: "Non-Engineering", value: 'NON'},
-  { text: "Not specified", value: 'NA'},
-  ];
-
-        /*<!--
-      <option>Economics</option>
-      <option>ISP</option>
-      <option>MMM</option>
-      <option>MSIT</option>
-      <option>MPDD</option>
-      <option>MSIA</option>
-      -->*/
-
-  $scope.response = {}; // $scope.attendee = {};
-  $scope.submit = function() {
-    
-    // if you want to force any fields to be mandatory indicate them here
-    /*if(!$scope.attendee.firstname) {
-      alert('Info required');
-      return;
-    }*/
-    $scope.showForm = false;
-    $scope.responses.push($scope.response); //$scope.attendees.push($scope.attendee);
-  };
-  
-});
 
 
 /*

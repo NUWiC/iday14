@@ -1,0 +1,162 @@
+<svg width="1100" height="2435" viewBox="-10 -800 1000 2225" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <!-- optimizes using peter collingridge's svg editor/optimiser
+ https://petercollingridge.appspot.com/svg-editor -->
+ <style>
+   .booth {
+   stroke: #000000;
+   fill: none;
+   stroke-width: 5;
+   }
+svg {background: lightgrey; }
+.wall {
+   stroke: #000000;
+   fill-opacity:0;
+   stroke-linecap: null;
+   stroke-linejoin: null;
+   stroke-dasharray: null;
+   stroke-width: 5;
+   fill: none;
+}
+.active {
+fill: cyan;
+} 
+
+ </style>
+ 
+ <g display="inline">
+  <title>img2</title>
+  <image xlink:href="http://i.imgur.com/ArXl22P.png" id="svg_1" height="1248" width="953" y="185" x="8"/>
+ </g>
+
+
+ <g display="inline">
+  <title>newimg</title>
+  <image xlink:href="http://i.imgur.com/HphIdr8.png" id="svg_2" height="2251" width="964" y="-818" x="5"/>
+ </g>
+
+
+ <g display="inline">
+  <title>booths</title>
+  <g id="svg_19">
+
+<rect id="booth6" height="21" width="56" y="-771" x="63" class="booth"/>
+<rect id="booth7" height="21" width="56" y="-766" x="293" class="booth"/>
+<rect id="booth4" height="21" width="56" y="-534" x="59" class="booth"/>
+<rect id="booth9" height="21" width="56" y="96" x="539" class="booth"/>
+<rect id="booth10" height="21" width="56" y="77" x="669" class="booth"/>
+<rect transform="rotate(-90 59.99997329711909,-376.33334350585943) " id="booth3" height="21" width="56" y="-387" x="32" class="booth"/>
+<rect class="booth" id="booth5" transform="rotate(-90 51.999973297119034,-651.0000000000001) " height="21" width="56" y="-662" x="24"/>
+<rect id="booth8" class="booth" transform="rotate(90 609.3333129882812,-104.33332061767577) " height="21" width="56" y="-115" x="581"/>
+<rect transform="rotate(-39.55965042114258 73.33332061767582,-194.9999847412109) " id="svg_87" height="21" width="56" y="-206" x="45" class="booth"/>
+<rect class="booth" transform="rotate(42.51044845581055 83.99998474121094,13.000009536743162) " id="svg_88" height="21" width="56" y="2" x="56"/>
+
+
+
+
+
+<rect class="booth" x="41" y="332" width="21" height="60" id="booth42"/>
+<rect class="booth " x="40" y="425" width="21" height="60" id="booth43"/>
+<rect class="booth" x="43" y="513" width="18" height="51" id="booth44"/>
+<rect class="booth" x="43" y="585" width="18" height="60" id="booth45"/>
+<rect class="booth" x="39" y="691" width="20" height="57" id="booth46"/>
+<rect class="booth" x="238" y="382" width="22" height="50" id="booth49"/>
+<rect class="booth" x="281" y="378" width="27" height="58" id="booth50"/>
+<rect class="booth" x="237" y="456" width="21" height="56" id="booth48"/>
+<rect class="booth" x="284" y="458" width="24" height="60" id="booth51"/>
+<rect class="booth" x="235" y="541" width="22" height="57" id="booth47"/>
+<rect class="booth" x="283" y="542" width="27" height="54" id="booth52"/>
+<rect class="booth" x="284" y="217" width="65" height="18" id="booth40"/>
+<rect class="booth" x="463" y="214" width="54" height="28" id="booth39"/>
+<rect class="booth" x="576" y="216" width="56" height="25" id="booth38"/>
+<rect class="booth" x="678" y="359" width="17" height="60" id="booth59"/>
+<rect class="booth" x="727" y="360" width="17" height="60" id="booth60"/>
+<rect class="booth" x="678" y="457" width="17" height="60" id="booth58"/>
+<rect class="booth" x="727" y="456" width="17" height="60" id="booth61"/>
+<rect class="booth" x="680" y="540" width="17" height="60" id="booth57"/>
+<rect class="booth" x="725" y="537" width="17" height="60" id="booth62"/>
+<rect class="booth" x="908" y="324" width="17" height="60" id="booth36"/>
+<rect class="booth" x="909" y="409" width="17" height="60" id="booth35"/>
+<rect class="booth" x="909" y="493" width="17" height="60" id="booth34"/>
+<rect class="booth" x="908" y="571" width="17" height="60" id="booth33"/>
+<rect class="booth" x="907" y="671" width="17" height="60" id="booth32"/>
+<rect class="booth" x="433" y="411" width="17" height="60" id="booth54"/>
+<rect class="booth" x="482" y="411" width="17" height="60" id="booth55"/>
+<rect class="booth" x="432" y="511" width="17" height="60" id="booth53"/>
+<rect class="booth" x="481" y="513" width="17" height="60" id="booth56"/>
+
+<rect class="booth" x="956" y="39" width="74" height="21" id="svg_33" transform="matrix(0.7008790586895676,0.5186515302772782,-0.5186515302772782,0.7008790586895676,196.13764103827577,-306.0634716546593) "/>
+<rect class="booth" x="52" y="80" width="74" height="21" transform="matrix(0.531614842633715,-0.6910980566171975,0.6910980566171975,0.531614842633715,-42.99335129261749,271.0982186362347) " id="svg_34"/>
+
+<rect class="booth" x="65" y="839" width="65" height="18" id="svg_35"/>
+<rect class="booth" x="269" y="838" width="65" height="18" id="svg_36"/>
+<rect class="booth" x="559" y="857" width="65" height="18" id="svg_37"/>
+<rect class="booth" x="988" y="754" width="74" height="21" id="svg_38" transform="matrix(0.638933169263332,-0.5932918927337969,0.5932918927337969,0.638933169263332,-225.76544504101662,968.0253084882027) "/>
+
+<rect class="booth" x="248" y="947" width="65" height="18" id="booth10"/>
+<rect class="booth" x="23" y="923" width="65" height="18" id="booth11"/>
+<rect class="booth" x="595" y="921" width="65" height="18" id="booth15"/>
+<rect class="booth" x="183" y="1032" width="65" height="18" id="booth12"/>
+<rect class="booth" x="283" y="1035" width="65" height="18" id="booth13"/>
+<rect class="booth" x="514" y="1036" width="65" height="18" id="booth14"/>
+<rect class="booth" x="625" y="1036" width="65" height="18" id="booth16"/>
+<rect class="booth" x="740" y="1038" width="65" height="18" id="svg_46"/>
+<rect class="booth" x="851" y="918" width="65" height="18" id="svg_47"/>
+<rect class="booth" x="845" y="1036" width="65" height="18" id="svg_48"/>
+<rect class="booth" x="656" y="1099" width="65" height="18" id="svg_49"/>
+
+<rect class="booth" x="233" y="1213" width="74" height="21" id="booth25" transform="matrix(4.6440852291236576e-7,-0.8719121886797552,0.8719121886797552,4.6440852291236576e-7,-835.734608805689,1472.0783421106814) "/>
+<rect class="booth" x="257" y="1051" width="74" height="21" id="booth26" transform="matrix(0.7127737068708423,-0.5,0.5021797562249352,0.7127737068708423,-497.63622158381645,500.38574908686286) "/>
+<rect class="booth" x="829" y="1169" width="74" height="21" id="booth22" transform="matrix(0.03287766790076221,0.8712921001145045,-0.9,0,1770,433) "/>
+<rect class="booth" x="527" y="1186" width="74" height="21" transform="matrix(0,0.9,-0.9,0.03287766790076221,1531.4962704153527,710.3756954396183) " id="booth2027"/>
+<rect class="booth" x="460" y="1221" width="74" height="21" id="booth2720" transform="matrix(-0.1,-0.9,0.9,-0.1,-628,1712) "/>
+<rect class="booth" x="243" y="1335" width="74" height="21" id="booth24" transform="matrix(0.5,0.7,-0.7,0.5,1075,505) "/>
+<rect class="booth" x="799" y="1340" width="74" height="21" id="svg_56" transform="matrix(0.5,-0,0.6,0.6,-640,1092) "/>
+
+<path class="wall" d="m12 904l0-717 946-1 0 719 -179-1 13-30 -114 0 15 31 -6810 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0z" id="svg_58"/>
+
+<line class="wall" x1="202" y1="218" x2="178" y2="186" id="svg_59"/>
+<line class="wall" x1="420" y1="219" x2="396" y2="187" id="svg_60"/>
+<line class="wall" x1="254" y1="906" x2="230" y2="875" id="svg_61"/>
+<line class="wall" x1="429" y1="906" x2="405" y2="875" id="svg_62"/>
+<line class="wall" x1="580" y1="906" x2="556" y2="875" id="svg_63"/>
+<line class="wall" x1="705" y1="217" x2="681" y2="186" id="svg_64"/>
+<line class="wall" x1="222" y1="222" x2="249" y2="190" id="svg_65"/>
+<line class="wall" x1="178" y1="904" x2="204" y2="873" id="svg_66"/>
+<line class="wall" x1="357" y1="909" x2="384" y2="878" id="svg_67"/>
+<line class="wall" x1="441" y1="217" x2="467" y2="186" id="svg_68"/>
+<line class="wall" x1="732" y1="219" x2="759" y2="187" id="svg_69"/>
+<line class="wall" x1="502" y1="906" x2="529" y2="875" id="svg_70"/>
+<line class="wall" x1="370" y1="1103" x2="397" y2="1072" id="svg_71"/>
+<line class="wall" x1="321" y1="1432" x2="348" y2="1401" id="svg_72"/>
+<line class="wall" x1="551" y1="1430" x2="578" y2="1399" id="svg_73"/>
+<line class="wall" x1="530" y1="1103" x2="506" y2="1072" id="svg_74"/>
+<line class="wall" x1="644" y1="1429" x2="620" y2="1398" id="svg_75"/>
+<line class="wall" x1="397" y1="1427" x2="373" y2="1396" id="svg_76"/>
+
+<path class="wall" d="m401 1073l-193-1 0 354 589 0 0-359 -296-1 30 40 -163-1 33-32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0z" id="svg_77"/>
+
+
+<text stroke="#000000" fill="#000000" stroke-width="0" x="369" y="868" id="svg_78" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" transform="matrix(0.9757868429625915,0,0,0.8719121886798789,-23.078713037476177,183.8957192263419) ">Northshore Room</text>
+
+<text stroke="#000000" fill="#000000" stroke-width="0" x="360" y="1103" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" transform="matrix(0.9757868429625913,0,0,0.8719121886798789,161.46109724516543,184.55850812316598) " id="svg_79">Lakeshore Room</text>
+
+
+
+
+<line class="wall" id="svg_90" y2="-587" x2="23" y1="-587" x1="225"/>
+<line class="wall" id="svg_91" y2="-242" x2="19" y1="-242" x1="288"/>
+<line class="wall" id="svg_93" y2="89" x2="18" y1="89" x1="220"/>
+<line class="wall" id="svg_94" y2="-319" x2="425" y1="-319" x1="640"/>
+<line class="wall" id="svg_95" y2="-239" x2="442" y1="-239" x1="654"/>
+<line class="wall" id="svg_96" y2="71" x2="481" y1="71" x1="649"/>
+<line class="wall" id="svg_97" y2="-800" x2="24" y1="-800" x1="427"/>
+<line class="wall" id="svg_98" y2="-319" x2="428" y1="-800" x1="428"/>
+<line class="wall" id="svg_99" y2="87" x2="22" y1="-799" x1="22"/>
+<line class="wall" x1="652" y1="-240" x2="652" y2="71" id="svg_92"/>
+
+
+  </g>
+ </g>
+
+</svg>

@@ -28,9 +28,30 @@
   stroke-linejoin: null;
   stroke-dasharray: null;
 }
-
-
 </style>
+
+
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ 
+http://i.imgur.com/CKWe0M9.png
+-->
+
+ <g>
+  <title>background image for tracing</title>
+  <!--image x="2" y="1" width="1093" height="1431" xlink:href="http://i.imgur.com/CKWe0M9.png"/-->
+  <image x="2" y="1" width="1093" height="1431" id="svg_1" xlink:href="http://i.imgur.com/ArXl22P.png"/>
+
+ </g>
+<style>
+.room {fill: none;}
+</style>
+
+
+
+
+
+
+
+
 
   <g id="hilton-garden">
 
@@ -52,7 +73,7 @@
     <g>
       <title> Booths </title>
 
-    <g ng-repeat="b in booths">  
+    <g ng-repeat="b in booths" ng-click="go('/companies/{{b.compId}}')">
       
     <!-- this still throws errors in console, but it does exactly what i want so... shrug -->
       

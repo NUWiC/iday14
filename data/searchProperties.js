@@ -15,9 +15,9 @@ var positions_list = [
 var majors_list = [ 
   { friendlyName: 'AM - Applied Math', name: 'am'},
   { friendlyName: 'BME - Biomedical Eng.', name: 'bme'},
-  { friendlyName: 'Chemical Engineering', name: 'chem'},
-  { friendlyName: 'Civil Engineering', name: 'civ'},
-  { friendlyName: 'Computer Engineering (CE)', name: 'ce'},
+  { friendlyName: 'ChemE - Chemical Engineering', name: 'chem'},
+  { friendlyName: 'CivE - Civil Engineering', name: 'civ'},
+  { friendlyName: 'CE - Computer Engineering', name: 'ce'},
   { friendlyName: 'CS - Computer Science', name: 'cs'},
   //{ friendlyName: 'CS - Computer Science (BS/McCormick)', name: 'cs'},
   //{ friendlyName: 'CS - Computer Science (BA/Weinberg)', name: 'csa'},
@@ -26,7 +26,7 @@ var majors_list = [
   { friendlyName: 'IE - Industrial Eng.', name: 'ie'},
   { friendlyName: 'MaDE', name: 'made'},
   { friendlyName: 'MatSci - Material Science', name:'matsci' },
-  { friendlyName: 'Mechanical Engineering', name: 'mech' },
+  { friendlyName: 'MechE - Mechanical Engineering', name: 'mech' },
   { friendlyName: 'Non-engineering', name: 'non' }
   //{ friendlyName: 'Non-engineering', name: 'noneng' }
 ];

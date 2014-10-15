@@ -243,22 +243,29 @@ https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_
         // description
         //
         this.companies[i].description = this.companies[i].profileCSO;
-        if(companies[i].profileLinkedin != null)
-          this.companies[i].description = this.companies[i].profileLinkedin;
+        if(this.companies[i].profileLIN != null)
+          this.companies[i].description = this.companies[i].profileLIN;
 
         //
         // industry
         //
         this.companies[i].industry = this.companies[i].industryCSO;
-        if(companies[i].descriptionLIN != null)
+        if(this.companies[i].industryLIN != null)
           this.companies[i].industry = this.companies[i].industryLIN;
 
         //
         // company type
         //
         this.companies[i].orgType = this.companies[i].typeCSO;
-        if(companies[i].descriptionLin != null)
-          this.companies[i].industry = this.companies[i].industryLinkedin;
+        if(this.companies[i].typeLIN != null)
+          this.companies[i].orgType = this.companies[i].typeLIN;
+
+        //
+        // website
+        //
+        this.companies[i].website = this.companies[i].websiteCSO;
+        //if(companies[i].profileLIN != null)
+        //  this.companies[i].description = this.companies[i].profileLIN;
 
 
 

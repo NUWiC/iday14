@@ -8,114 +8,129 @@
 </script>
 
 <!-- TODO: if none (majors or positions), then output to user (none) or soemthing -->
-
 <ion-view title="{{company.name}}" left-buttons="leftButtons">
-  <ion-content>
-  
-  <!--ion-header class="subheader">Next company: {{nextCompany}} </ion-header-->
+    <ion-content>
+
+        <!--ion-header class="subheader">Next company: {{nextCompany}} </ion-header-->
 
         <img class="full-image item" style="max-height: 250px; max-width: 760px;" ng-src="./img/logos/{{company.id}}/wide.png" />
 
-    <!--{{ company | json }}
-
-    <li ng-repeat="i in industries">{{i.name}} | {{i.friendlyName}}</li>
-    <li ng-repeat="m in majors">{{m.name}} | {{m.friendlyName}}</li>
-    <li ng-repeat="p in positions">{{p.name}} | {{p.friendlyName}}</li>
-    ->
+       
 
 
     <!--Un-star this company (label 0 or exists)"
 instead of boolean 0 1 its 0 "label that exists to prompt un-starring" -->
-
-<!-- for some reason, the plunker will change the star fill with the toggle, but this wont?? --><!--ng-true-value="Un-star this company"
+        <!--ng-true-value="Un-star this company"
           ng-false-value="Star this company"-->
-    <ion-toggle class="item item-icon-left"
-          ng-model="company.starred" toggle-class="toggle-royal">
-      <i class="icon royal"
-          ng-class="company.starred ? 'ion-ios7-star':'ion-ios7-star-outline'"></i>
-      <span>{{company.name}}</span>
-      <span class="item-note"> {{company.starred}}</span> <!-- need initial text....??? -->
-    </ion-toggle>
+
+
+        <ion-toggle class="item item-icon-left" ng-model="company.starred" toggle-class="toggle-royal">
+            <i class="icon royal" ng-class="company.starred ? 'ion-ios7-star':'ion-ios7-star-outline'"></i>
+            <span>{{company.name}}</span>
+            <!--span class="item-note"> {{company.starred}}</span>
+      <!-- need initial text....??? -->
+        </ion-toggle>
 
 
 
-    <!-- #/map/{{company.id}}" will be future url when there is booth specific view -->
-    <a class="item item-icon-right positive" href="#/map">
-      <i class="icon ion-navigate"></i>
-      Booth # {{company.booth}}: {{company.room}} (Floor {{company.floor}})
-    </a>
+    <!-- #/map/{{company.id}}" in future when a booth map view exists-->
+        <a class="item item-icon-right positive" href="#/map">
+            <i class="icon ion-navigate"></i>
+            Booth # {{company.booth}}: {{company.room}} (Floor {{company.floor}})
+        </a>
 
-    
-      <!--h3> Majors </h3-->
-      <div class="item item-divider"> Majors </div>
-     <div class="padding">
-        <li ng-repeat="m in majors" ng-show="company[m.name]">{{m.friendlyName}}</li>
-       </div>
+
+        <!--h3> Majors </h3-->
+        <div class="item item-divider">Majors</div>
+        <div class="padding">
+            <li ng-repeat="m in majors" ng-show="company[m.name]">{{m.friendlyName}}</li>
+        </div>
         <br>
-    
-        <div class="item item-divider"> Positions </div>
+
+        <div class="item item-divider">Positions</div>
         <p class="padding">
-        <!--h3> Positions </h3-->
-        <!--span ng-repeat="p in positions">
+            <!--span ng-repeat="p in positions">
          {{company[p.name] | checkmark }} {{p.friendlyName}} &nbsp;&nbsp; </span>
          </p-->
 
+            <span ng-repeat="p in positions">
+                {{company[p.name] | checkmark }} {{p.friendlyName}}
+                <br>
+            </span>
 
-        <span ng-repeat="p in positions">
-         {{company[p.name] | checkmark }} {{p.friendlyName}}<br>
-         </span>
-         
-         </p>
+        </p>
 
 
-          <!--h3 class="item item-body"> Description </h3-->
-          <div class="item item-divider"> Description </div>
+        <div class="item item-divider">Description</div>
         <p class="padding">{{company.description}}</p>
 
 
-<div class="item item-divider assertive "> About {{company.name}} </div>
-<div class="item item-icon-left"> <i class="icon ion-briefcase"></i>{{company.industry}}</div>
-
-
-<div class="item item-icon-left"><i class="icon ion-briefcase"></i>
-{{company.linkedinIndustry}} <!--p>{{company.specialties}}</p-->
+<div class="item item-divider assertive ">About {{company.name}}</div>
+        
+<div class="item item-icon-left">
+  <i class="icon ion-briefcase"></i>
+  {{company.industry}}
 </div>
-<p class="padding" style="color: #666;">{{company.specialties}}</p>
 
 
-<div class="item item-icon-left"> <i class="icon ion-person-stalker"></i>{{company.size}} </div>
+<div class="item item-icon-left">
+    <i class="icon ion-briefcase"></i>
+    {{company.linkedinIndustry}}
+    <!--p>{{company.specialties}}</p-->
+</div>
 
-<div class="item item-icon-left"> <i class="icon ion-information-circled"></i>{{company.type}} &nbsp;&nbsp;&nbsp;(LinkedIn: {{company.companyType}}) </div>
+<p class="padding" style="color: #666;">
+    {{company.specialties}}
+</p>
 
-<div class="item item-icon-left"> <i class="icon ion-location"></i>{{company.city}}, {{company.state}}&nbsp; {{company.zip}} </div>
+<div class="item item-icon-left">
+    <i class="icon ion-person-stalker"></i>
+    {{company.size}}
+</div>
 
+<div class="item item-icon-left">
+  <i class="icon ion-information-circled"></i>
+  {{company.type}} &nbsp;&nbsp;&nbsp;(LinkedIn: {{company.companyType}})
+</div>
 
-<div class="item item-icon-left"> <i class="icon ion-pin"></i>
-HQ: {{company.hqCity}} {{company.hqState}}&nbsp; {{company.hqZip}} </div>
-    
+<div class="item item-icon-left">
+  <i class="icon ion-location"></i>
+  {{company.city}}, {{company.state}}&nbsp; {{company.zip}}
+</div>
+
+<div class="item item-icon-left">
+<i class="icon ion-pin"></i>
+    HQ: {{company.hqCity}} {{company.hqState}}&nbsp; {{company.hqZip}}
+</div>
+
 
 <div class="item item-divider item-icon-left">
-  <i class="icon ion-link"></i>
-  <a href="{{company.website}}" target="_blank">{{company.website}} </a>
-  <span class="note"><i class="ion-share button-large"></i></span>
+    <i class="icon ion-link"></i>
+    <a href="{{company.website}}" target="_blank">{{company.website}}</a>
+    <span class="note"><i class="ion-share button-large"></i>
+    </span>
 </div>
 
 
-<a ng-show="{{company.facebook}}" class="item item-divider item-icon-left" href="{{company.facebook}}" target="_blank">
-<i class="icon ion-social-facebook"></i>Facebook
+<!--a ng-show="{{company.facebook}}" class="item item-divider item-icon-left" href="{{company.facebook}}" target="_blank">
+    <i class="icon ion-social-facebook"></i>Facebook
 </a>
 <a ng-show="{{company.twitter}}" class="item item-divider item-icon-left" href="{{company.twitter}}" target="_blank">
-<i class="icon ion-social-twitter"></i>Twitter
-</a>
+    <i class="icon ion-social-twitter"></i>Twitter
+</a-->
 
 <a ng-show="{{company.linkedinID}}" class="item item-divider item-icon-left" href="{{company.linkedin}}" target="_blank">
-<i class="icon ion-social-linkedin"></i>Linkedin
+    <i class="icon ion-social-linkedin"></i>
+    Linkedin
 </a>
 
 
 <div class="item item-divider">
-  <a class="clear" href="https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_id={{company.empId}}" target="_blank"> <strong>McCormick</strong><em>Connect</em> Employer Info </a>
+    <a class="clear" href="https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_id={{company.empId}}" target="_blank">
+        <strong>McCormick</strong>
+        <em>Connect</em>Employer Info</a>
 </div>
+
 
 <!-- formatting for mccormick connect seems to be overridden, particularly italic -->
 
@@ -131,6 +146,19 @@ HQ: {{company.hqCity}} {{company.hqState}}&nbsp; {{company.hqZip}} </div>
   <a class="button button-dark icon ion-social-linkedin" href="{{company.linkedin}}" target="_blank">
 </a>
 </div-->
+
+<!--div class="item item-divider"> Company JSON </div>
+<p>
+{{company | json}}
+</p-->
     
   </ion-content>
 </ion-view>
+
+
+ <!--{{ company | json }}
+
+    <li ng-repeat="i in industries">{{i.name}} | {{i.friendlyName}}</li>
+    <li ng-repeat="m in majors">{{m.name}} | {{m.friendlyName}}</li>
+    <li ng-repeat="p in positions">{{p.name}} | {{p.friendlyName}}</li>
+    ->

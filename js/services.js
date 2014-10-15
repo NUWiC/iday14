@@ -89,13 +89,25 @@ app.service('CareerFairService', function($q) {
       return dfd.promise;
     },
 
+// {"empId":1586,
+//"cso_organizationName":"Atomatic Mechanical Services",
+//"cso_branch":null,"cso_industry":"Engineering",
+//"cso_orgType":"Private",
+//"cso_website":"http://www.atomatic.com",
+//"cso_city":"Arlington Heights",
+//"cso_state":"IL",
+//"cso_zip":60004,
+//"cso_country":"United States",
+//"cso_profile":"For over 65 years Atomatic Mechanical Services has been dedicated to quality design installation and service of HVAC systems for the commercial institutional industrial and residential building markets throughout metropolitan Chicago. Our solid reputation is built on high standards innovative designs and exceptional customer service. We honor our word and commitments. Atomaticâ€™s ultimate goal is to continually meet the changing needs of our customers and exceed their expectations.","cso_onlineapp":""},
 
     //
     // Links all company information/properties
     // and returns the FULL list of companies
     // should only be called once
     //
-    getCompanies: function() {
+        getCompanies: function() {
+
+      
 
       for (var i = 0; i < this.companies.length; i++) {
         
@@ -114,30 +126,7 @@ app.service('CareerFairService', function($q) {
           }
         }
 
-        
-
-
-/*
-https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_id=
-
-"empId":1586,
-"cso_organizationName":"Atomatic Mechanical Services",
-"cso_branch":null,
-"cso_industry":"Engineering",
-"cso_orgType":"Private",
-"cso_website":"http://www.atomatic.com",
-"cso_city":"Arlington Heights",
-"cso_state":"IL",
-"cso_zip":60004,
-"cso_country":"United States",
-"cso_profile":"For over 65 years Atomatic Mechanical Services has been dedicated to quality design installation and service of HVAC systems for the commercial institutional industrial and residential building markets throughout metropolitan Chicago. Our solid reputation is built on high standards innovative designs and exceptional customer service. We honor our word and commitments. Atomaticâ€™s ultimate goal is to continually meet the changing needs of our customers and exceed their expectations.",
-"cso_onlineapp":""
-*/
-
-        // ----------------------------------------------------------
-        //
-        //
-        
+    
         
         // link the relevant information from the CSO mccormickconnect data
         // to each company object
@@ -147,43 +136,24 @@ https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_
           //csoData[k]["empId"] 
           if(this.csoData[k].empId == this.companies[i].empId )
           {
-              // Excluding these fields:
-              // organization name
-              // phone, fax, address1, address2, country
-              // facebook, twitter, linkedin
-
-              // name = organizationname
-              // this.companies[i].csoOrganizationName = this.csoData[k].cso_organizationName;
+            // name = organizationname
+              this.companies[i].branch = this.csoData[k].cso_branch; // branch
+              this.companies[i].website = this.csoData[k].cso_website; //website;
               
-              this.companies[i].branch = this.csoData[k].cso_branch;
-              this.companies[i].industryCSO = this.csoData[k].cso_industry;
-              this.companies[i].websiteCSO = this.csoData[k].cso_website;
-
-              // Linkedin organization type is more reputable
-              // but not all companies have a LinkedIn page
-              this.companies[i].typeCSO = this.csoData[k].cso_orgType;
-              //this.companies[i]["type"] = this.csoData[k]["type"];
-                // csoOrgType cso_orgType 
-              
-              // I found errors in these 3 fields in McCormickConnect info
-              // (facebook / twitter / linkedin)
-              // also many companies do not fill them out
-              //
+              // facebook // twitter // linkedin
               //this.companies[i].facebook = this.csoData[k].facebook;
               //this.companies[i].twitter = this.csoData[k].twitter;
               //this.companies[i].linkedin = this.csoData[k].linkedin;
 
-              // onlineApp is also rarely filled out, but will include anyway
-              this.companies[i].onlineApp = this.csoData[k].cso_onlineapp;
-
-
-              this.companies[i].city = this.csoData[k].cso_city;
-              this.companies[i].state = this.csoData[k].cso_state;
-              this.companies[i].zip = this.csoData[k].cso_zip;
-
-              // description --> csoProfile
-              this.companies[i].profileCSO = this.csoData[k].cso_profile;
-              
+              this.companies[i].industry = this.csoData[k].cso_industry; //industry;
+              this.companies[i]["type"] =this.csoData[k].cso_orgType;  //this.csoData[k]["type"]; 
+              // address1 // ,address2: // country
+              this.companies[i].city = this.csoData[k].cso_city; //city;
+              this.companies[i].state = this.csoData[k].cso_state;  //state;
+              this.companies[i].zip = this.csoData[k].cso_zip;  //zip;
+              // phone  // fax
+              this.companies[i].description = this.csoData[k].cso_profile;  //profile;
+              // onlineApp
               break;
           } 
         }
@@ -207,10 +177,6 @@ https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_
             this.companies[i].hqCity = this.linkedinData[k].hqCity;
             this.companies[i].hqState = this.linkedinData[k].hqState;
             this.companies[i].hqZip = this.linkedinData[k].hqZip;
-            // description2-blurb
-            // blurb-->linkedinProfile...linkedinProfie... linkedinDescription
-            // descriptionLin
-            // description2 --> description
             this.companies[i].description2 = this.linkedinData[k].blurb;
             this.companies[i].companyWebsite = this.linkedinData[k].website;
 
@@ -220,53 +186,6 @@ https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_
               break;
           } 
         }
-
-        // Choose most reputable properties to display
-        // template for company-details referneces these properties:
-        // company. ...
-        // name, starred, booth, room, (majors), (positions),
-        // website
-        // description, specialties, size,
-        // type or companyType
-        // city, state, zip
-        // hqCity, hqState, hqZip
-
-        // facebook, twitter, linkedinID, empID
-
-        // blurbLinkedin.... profileL
-        // industryLinkedin profileLin descLin
-
-        //company.description;
-        //company.type;
-
-        //
-        // description
-        //
-        this.companies[i].description = this.companies[i].profileCSO;
-        if(this.companies[i].profileLIN != null)
-          this.companies[i].description = this.companies[i].profileLIN;
-
-        //
-        // industry
-        //
-        this.companies[i].industry = this.companies[i].industryCSO;
-        if(this.companies[i].industryLIN != null)
-          this.companies[i].industry = this.companies[i].industryLIN;
-
-        //
-        // company type
-        //
-        this.companies[i].orgType = this.companies[i].typeCSO;
-        if(this.companies[i].typeLIN != null)
-          this.companies[i].orgType = this.companies[i].typeLIN;
-
-        //
-        // website
-        //
-        this.companies[i].website = this.companies[i].websiteCSO;
-        //if(companies[i].profileLIN != null)
-        //  this.companies[i].description = this.companies[i].profileLIN;
-
 
 
         
@@ -356,6 +275,195 @@ app.service('AttendeesService', function($q) {
   }
 })
 
+
+
+
+
+/* CONFUSED MYSELF
+
+    getCompanies: function() {
+
+      for (var i = 0; i < this.companies.length; i++) {
+        
+        // link the relevant information from the booths to the corresponding company
+        for (var j = 0; j < this.booths.length; j++) {
+          
+          if(this.companies[i].booth == this.booths[j].bNum) {
+            this.companies[i].room = this.booths[j].room;
+            this.companies[i].floor = this.booths[j].floor;
+            
+            this.booths[j].compId = this.companies[i].id;
+            this.booths[j].id = "booth" + this.booths[j].bNum;
+            
+            //this.companies[i].booth = this.booths[j].id;
+            break;
+          }
+        }
+
+        
+
+
+/*
+https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_id=
+
+"empId":1586,
+"cso_organizationName":"Atomatic Mechanical Services",
+"cso_branch":null,
+"cso_industry":"Engineering",
+"cso_orgType":"Private",
+"cso_website":"http://www.atomatic.com",
+"cso_city":"Arlington Heights",
+"cso_state":"IL",
+"cso_zip":60004,
+"cso_country":"United States",
+"cso_profile":"For over 65 years Atomatic Mechanical Services has been dedicated to quality design installation and service of HVAC systems for the commercial institutional industrial and residential building markets throughout metropolitan Chicago. Our solid reputation is built on high standards innovative designs and exceptional customer service. We honor our word and commitments. Atomaticâ€™s ultimate goal is to continually meet the changing needs of our customers and exceed their expectations.",
+"cso_onlineapp":""
+
+
+        // ----------------------------------------------------------
+        //
+        //
+        
+        
+        // link the relevant information from the CSO mccormickconnect data
+        // to each company object
+        var k = 0;
+        for (k = 0; k < this.csoData.length; k++)
+        {
+          //csoData[k]["empId"] 
+          if(this.csoData[k].empId == this.companies[i].empId )
+          {
+              // Excluding these fields:
+              // organization name
+              // phone, fax, address1, address2, country
+              // facebook, twitter, linkedin
+
+              // name = organizationname
+              // this.companies[i].csoOrganizationName = this.csoData[k].cso_organizationName;
+              
+              this.companies[i].branch = this.csoData[k].cso_branch;
+              this.companies[i].industryCSO = this.csoData[k].cso_industry;
+              this.companies[i].websiteCSO = this.csoData[k].cso_website;
+
+              // Linkedin organization type is more reputable
+              // but not all companies have a LinkedIn page
+              this.companies[i].typeCSO = this.csoData[k].cso_orgType;
+              //this.companies[i]["type"] = this.csoData[k]["type"];
+                // csoOrgType cso_orgType 
+              
+              // I found errors in these 3 fields in McCormickConnect info
+              // (facebook / twitter / linkedin)
+              // also many companies do not fill them out
+              //
+              //this.companies[i].facebook = this.csoData[k].facebook;
+              //this.companies[i].twitter = this.csoData[k].twitter;
+              //this.companies[i].linkedin = this.csoData[k].linkedin;
+
+              // onlineApp is also rarely filled out, but will include anyway
+              this.companies[i].onlineApp = this.csoData[k].cso_onlineapp;
+
+
+              this.companies[i].city = this.csoData[k].cso_city;
+              this.companies[i].state = this.csoData[k].cso_state;
+              this.companies[i].zip = this.csoData[k].cso_zip;
+
+              // description --> csoProfile
+              this.companies[i].profileCSO = this.csoData[k].cso_profile;
+              
+              break;
+          } 
+        }
+
+        // link the relevant information from the linkedIn data
+        // to each company object
+        for (k = 0; k < this.linkedinData.length; k++)
+        {
+          
+          if(this.linkedinData[k].empId == this.companies[i].empId )
+          {
+
+            // name = companyName
+            this.companies[i].linkedinID = this.linkedinData[k].linkedinID;
+            this.companies[i].linkedinIndustry = this.linkedinData[k].industry;
+            this.companies[i].specialties = this.linkedinData[k].specialties;
+            this.companies[i]["size"] = this.linkedinData[k].companySize;
+            this.companies[i].companyType = this.linkedinData[k].type;
+            this.companies[i].founded = this.linkedinData[k].founded;
+
+            this.companies[i].hqCity = this.linkedinData[k].hqCity;
+            this.companies[i].hqState = this.linkedinData[k].hqState;
+            this.companies[i].hqZip = this.linkedinData[k].hqZip;
+            // description2-blurb
+            // blurb-->linkedinProfile...linkedinProfie... linkedinDescription
+            // descriptionLin
+            // description2 --> description
+            this.companies[i].description2 = this.linkedinData[k].blurb;
+            this.companies[i].companyWebsite = this.linkedinData[k].website;
+
+            // or ["Source Page URL"];
+            this.companies[i].linkedin = "http://www.linkedin.com/company/" + this.companies[i].linkedinID;
+           // type  founded  hqAddress  Source Page url  hqCountry  
+              break;
+          } 
+        }
+
+        // Choose most reputable properties to display
+        // template for company-details referneces these properties:
+        // company. ...
+        // name, starred, booth, room, (majors), (positions),
+        // website
+        // description, specialties, size,
+        // type or companyType
+        // city, state, zip
+        // hqCity, hqState, hqZip
+
+        // facebook, twitter, linkedinID, empID
+
+        // blurbLinkedin.... profileL
+        // industryLinkedin profileLin descLin
+
+        //company.description;
+        //company.type;
+
+        //
+        // description
+        //
+        this.companies[i].description = this.companies[i].profileCSO;
+        if(this.companies[i].profileLIN != null)
+          this.companies[i].description = this.companies[i].profileLIN;
+
+        //
+        // industry
+        //
+        this.companies[i].industry = this.companies[i].industryCSO;
+        if(this.companies[i].industryLIN != null)
+          this.companies[i].industry = this.companies[i].industryLIN;
+
+        //
+        // company type
+        //
+        this.companies[i].orgType = this.companies[i].typeCSO;
+        if(this.companies[i].typeLIN != null)
+          this.companies[i].orgType = this.companies[i].typeLIN;
+
+        //
+        // website
+        //
+        this.companies[i].website = this.companies[i].websiteCSO;
+        //if(companies[i].profileLIN != null)
+        //  this.companies[i].description = this.companies[i].profileLIN;
+
+
+
+        
+
+
+      }
+      
+      return this.companies;
+    },
+
+    */
 
 
 

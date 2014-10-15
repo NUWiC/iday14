@@ -11,10 +11,13 @@ app.service('CareerFairService', function($q) {
     // majors
     // positions
     // citizenship
-    companies: company_list, //companies, //company_grid,
+    //companies, //company_grid,
+
+    // these variables come from separate js files in data folder
+    companies: company_list, 
     linkedinData: company_list_linkedinData,
     csoData: company_list_csoData,
-    
+    booths: booth_info,
     
     // Booth information includes:
     // id - int - the unique booth number used to identify this booth and link it to a company
@@ -28,7 +31,7 @@ app.service('CareerFairService', function($q) {
     // rotate - int - degrees to rotate the booth 
     // compId - string - the abbreviated name and unique identifier of a company
     
-    booths: booth_info,
+    
 
     // feed in a unique identifier that will not change
     // in my data i'm using empId (the cso id number)

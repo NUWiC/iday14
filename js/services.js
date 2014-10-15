@@ -111,7 +111,10 @@ app.service('CareerFairService', function($q) {
         getCompanies: function() {
 
       
-
+          // loop through each company only once
+          // still has bad runtime cuz gonna loop through 3 more
+          // arrays of same length
+          // but its a small data set
       for (var i = 0; i < this.companies.length; i++) {
         
         // link the relevant information from the booths to the corresponding company

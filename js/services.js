@@ -89,9 +89,13 @@ app.service('CareerFairService', function($q) {
       return dfd.promise;
     },
 
-    getCompanies: function() {
 
-      
+    //
+    // Links all company information/properties
+    // and returns the FULL list of companies
+    // should only be called once
+    //
+    getCompanies: function() {
 
       for (var i = 0; i < this.companies.length; i++) {
         
@@ -112,27 +116,23 @@ app.service('CareerFairService', function($q) {
 
         
 
-//{"empId":51,"linkedinID":1864,"Source Page URL":"https://www.linkedin.com/company/3m",
-//"companyName":"3M","industry":"Mechanical or Industrial Engineering",
-//"specialties":"Innovation, Collaboration, Global, Diverse Career Opportunities",
-//"companySize":"10,001+ employees","type":"Public Company","founded":1902,
-//"hqAddress":"","hqCity":"","hqState":"","hqZip":null,"hqCountry":"",
-//"blurb":"Over the years, our innovations have improved daily life for hundreds of millions of people all over the world. We have made driving at night easier, made buildings safer, and made consumer electronics lighter, less energy-intensive and less harmful to the environment. We even helped put a man on the moon. 3M is an incredible place.",
-//"website":"http://www.3M.com/careers"},
 
-//{"empId":51,"organizationName":"3M","branch":"Film Manufacturing",
-//"website":"http://www.mmm.com",
-//"facebook":"https://www.facebook.com/3MCareers","twitter":null,"linkedin":"",
-//"industry":"Manufacturing","type":"Public",
-//"address1":"3M Film Manufacturing & Supply Chain Operations",
-//"address2":"3M Center, Building 0220-12N-05",
-//"city":"St. Paul","state":"MN","zip":55144-1000,"country":"USA",
-//"phone":"(651) 737-4259","fax":"651. 733.1570",
-//"profile":"Diversified Manufacturing",
-//"onlineApp":"","inDirectory":"TRUE",
-//"Majors":"ChE - Chemical Engineering EE - Electrical Engineering IE - Industrial Engineering MaDE - Manufacturing and Design Engineering ME - Mechanical Engineering MatSE - Materials Science and Engineering"},
+/*
+https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_id=
 
-//branch,website,facebook:,twitter:,linkedin:"",industry:,type:,address1:address2:,city:"St. Paul",state:"MN",zip:,Country:,phone:,fax:,profile==description,onlineApp:""},
+"empId":1586,
+"cso_organizationName":"Atomatic Mechanical Services",
+"cso_branch":null,
+"cso_industry":"Engineering",
+"cso_orgType":"Private",
+"cso_website":"http://www.atomatic.com",
+"cso_city":"Arlington Heights",
+"cso_state":"IL",
+"cso_zip":60004,
+"cso_country":"United States",
+"cso_profile":"For over 65 years Atomatic Mechanical Services has been dedicated to quality design installation and service of HVAC systems for the commercial institutional industrial and residential building markets throughout metropolitan Chicago. Our solid reputation is built on high standards innovative designs and exceptional customer service. We honor our word and commitments. Atomaticâ€™s ultimate goal is to continually meet the changing needs of our customers and exceed their expectations.",
+"cso_onlineapp":""
+*/
 
         
         // link the relevant information from the CSO mccormickconnect data
@@ -280,3 +280,30 @@ app.service('AttendeesService', function($q) {
     }
   }
 })
+
+
+
+
+/*
+//{"empId":51,"linkedinID":1864,"Source Page URL":"https://www.linkedin.com/company/3m",
+//"companyName":"3M","industry":"Mechanical or Industrial Engineering",
+//"specialties":"Innovation, Collaboration, Global, Diverse Career Opportunities",
+//"companySize":"10,001+ employees","type":"Public Company","founded":1902,
+//"hqAddress":"","hqCity":"","hqState":"","hqZip":null,"hqCountry":"",
+//"blurb":"Over the years, our innovations have improved daily life for hundreds of millions of people all over the world. We have made driving at night easier, made buildings safer, and made consumer electronics lighter, less energy-intensive and less harmful to the environment. We even helped put a man on the moon. 3M is an incredible place.",
+//"website":"http://www.3M.com/careers"},
+
+//{"empId":51,"organizationName":"3M","branch":"Film Manufacturing",
+//"website":"http://www.mmm.com",
+//"facebook":"https://www.facebook.com/3MCareers","twitter":null,"linkedin":"",
+//"industry":"Manufacturing","type":"Public",
+//"address1":"3M Film Manufacturing & Supply Chain Operations",
+//"address2":"3M Center, Building 0220-12N-05",
+//"city":"St. Paul","state":"MN","zip":55144-1000,"country":"USA",
+//"phone":"(651) 737-4259","fax":"651. 733.1570",
+//"profile":"Diversified Manufacturing",
+//"onlineApp":"","inDirectory":"TRUE",
+//"Majors":"ChE - Chemical Engineering EE - Electrical Engineering IE - Industrial Engineering MaDE - Manufacturing and Design Engineering ME - Mechanical Engineering MatSE - Materials Science and Engineering"},
+
+//branch,website,facebook:,twitter:,linkedin:"",industry:,type:,address1:address2:,city:"St. Paul",state:"MN",zip:,Country:,phone:,fax:,profile==description,onlineApp:""},
+*/

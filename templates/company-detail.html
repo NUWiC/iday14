@@ -37,6 +37,8 @@ instead of boolean 0 1 its 0 "label that exists to prompt un-starring" -->
       <span class="item-note"> {{company.starred}}</span> <!-- need initial text....??? -->
     </ion-toggle>
 
+
+
     <!-- #/map/{{company.id}}" will be future url when there is booth specific view -->
     <a class="item item-icon-right positive" href="#/map">
       <i class="icon ion-navigate"></i>
@@ -54,9 +56,17 @@ instead of boolean 0 1 its 0 "label that exists to prompt un-starring" -->
         <div class="item item-divider"> Positions </div>
         <p class="padding">
         <!--h3> Positions </h3-->
-        <span ng-repeat="p in positions">
+        <!--span ng-repeat="p in positions">
          {{company[p.name] | checkmark }} {{p.friendlyName}} &nbsp;&nbsp; </span>
+         </p-->
+
+
+        <span ng-repeat="p in positions">
+         {{company[p.name] | checkmark }} {{p.friendlyName}}<br>
+         </span>
+         
          </p>
+
 
           <!--h3 class="item item-body"> Description </h3-->
           <div class="item item-divider"> Description </div>

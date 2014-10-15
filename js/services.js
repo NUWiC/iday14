@@ -207,6 +207,10 @@ https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_
             this.companies[i].hqCity = this.linkedinData[k].hqCity;
             this.companies[i].hqState = this.linkedinData[k].hqState;
             this.companies[i].hqZip = this.linkedinData[k].hqZip;
+            // description2-blurb
+            // blurb-->linkedinProfile...linkedinProfie... linkedinDescription
+            // descriptionLin
+            // description2 --> description
             this.companies[i].description2 = this.linkedinData[k].blurb;
             this.companies[i].companyWebsite = this.linkedinData[k].website;
 
@@ -216,6 +220,46 @@ https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_
               break;
           } 
         }
+
+        // Choose most reputable properties to display
+        // template for company-details referneces these properties:
+        // company. ...
+        // name, starred, booth, room, (majors), (positions),
+        // website
+        // description, specialties, size,
+        // type or companyType
+        // city, state, zip
+        // hqCity, hqState, hqZip
+
+        // facebook, twitter, linkedinID, empID
+
+        // blurbLinkedin.... profileL
+        // industryLinkedin profileLin descLin
+
+        //company.description;
+        //company.type;
+
+        //
+        // description
+        //
+        this.companies[i].description = this.companies[i].profileCSO;
+        if(companies[i].profileLinkedin != null)
+          this.companies[i].description = this.companies[i].profileLinkedin;
+
+        //
+        // industry
+        //
+        this.companies[i].industry = this.companies[i].industryCSO;
+        if(companies[i].descriptionLIN != null)
+          this.companies[i].industry = this.companies[i].industryLIN;
+
+        //
+        // company type
+        //
+        this.companies[i].orgType = this.companies[i].typeCSO;
+        if(companies[i].descriptionLin != null)
+          this.companies[i].industry = this.companies[i].industryLinkedin;
+
 
 
         
@@ -277,7 +321,7 @@ https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_
     //    for (var i = 0; i < this.booths.length; i++) {
     //      if(company.booth === booths[i].bNum) {
     //      }  }
-/*
+
 app.service('AttendeesService', function($q) {
   
   return {
@@ -304,7 +348,7 @@ app.service('AttendeesService', function($q) {
     }
   }
 })
-*/
+
 
 
 

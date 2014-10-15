@@ -48,8 +48,8 @@ fill: cyan;
 <rect transform="rotate(-90 59.99997329711909,-376.33334350585943) " id="booth3" height="21" width="56" y="-387" x="32" class="booth"/>
 <rect class="booth" id="booth5" transform="rotate(-90 51.999973297119034,-651.0000000000001) " height="21" width="56" y="-662" x="24"/>
 <rect id="booth8" class="booth" transform="rotate(90 609.3333129882812,-104.33332061767577) " height="21" width="56" y="-115" x="581"/>
-<rect transform="rotate(-39.55965042114258 73.33332061767582,-194.9999847412109) " id="svg_87" height="21" width="56" y="-206" x="45" class="booth"/>
-<rect class="booth" transform="rotate(42.51044845581055 83.99998474121094,13.000009536743162) " id="svg_88" height="21" width="56" y="2" x="56"/>
+<rect transform="rotate(-39.55965042114258 73.33332061767582,-194.9999847412109) " id="booth2" height="21" width="56" y="-206" x="45" class="booth"/>
+<rect class="booth" transform="rotate(42.51044845581055 83.99998474121094,13.000009536743162) " id="booth1" height="21" width="56" y="2" x="56"/>
 
 
 
@@ -85,13 +85,14 @@ fill: cyan;
 <rect class="booth" x="432" y="511" width="17" height="60" id="booth53"/>
 <rect class="booth" x="481" y="513" width="17" height="60" id="booth56"/>
 
-<rect class="booth" x="956" y="39" width="74" height="21" id="svg_33" transform="matrix(0.7008790586895676,0.5186515302772782,-0.5186515302772782,0.7008790586895676,196.13764103827577,-306.0634716546593) "/>
-<rect class="booth" x="52" y="80" width="74" height="21" transform="matrix(0.531614842633715,-0.6910980566171975,0.6910980566171975,0.531614842633715,-42.99335129261749,271.0982186362347) " id="svg_34"/>
+<rect class="booth" x="956" y="39" width="74" height="21" id="booth37" transform="matrix(0.7008790586895676,0.5186515302772782,-0.5186515302772782,0.7008790586895676,196.13764103827577,-306.0634716546593) "/>
 
-<rect class="booth" x="65" y="839" width="65" height="18" id="svg_35"/>
-<rect class="booth" x="269" y="838" width="65" height="18" id="svg_36"/>
-<rect class="booth" x="559" y="857" width="65" height="18" id="svg_37"/>
-<rect class="booth" x="988" y="754" width="74" height="21" id="svg_38" transform="matrix(0.638933169263332,-0.5932918927337969,0.5932918927337969,0.638933169263332,-225.76544504101662,968.0253084882027) "/>
+<rect class="booth active" x="52" y="80" width="74" height="21" transform="matrix(0.531614842633715,-0.6910980566171975,0.6910980566171975,0.531614842633715,-42.99335129261749,271.0982186362347) " id="svg_34"/>
+
+<rect class="booth" x="65" y="839" width="65" height="18" id="booth28"/>
+<rect class="booth" x="269" y="838" width="65" height="18" id="booth29"/>
+<rect class="booth" x="559" y="857" width="65" height="18" id="booth30"/>
+<rect class="booth" x="988" y="754" width="74" height="21" id="booth31" transform="matrix(0.638933169263332,-0.5932918927337969,0.5932918927337969,0.638933169263332,-225.76544504101662,968.0253084882027) "/>
 
 <rect class="booth" x="248" y="947" width="65" height="18" id="booth10"/>
 <rect class="booth" x="23" y="923" width="65" height="18" id="booth11"/>
@@ -100,10 +101,10 @@ fill: cyan;
 <rect class="booth" x="283" y="1035" width="65" height="18" id="booth13"/>
 <rect class="booth" x="514" y="1036" width="65" height="18" id="booth14"/>
 <rect class="booth" x="625" y="1036" width="65" height="18" id="booth16"/>
-<rect class="booth" x="740" y="1038" width="65" height="18" id="svg_46"/>
-<rect class="booth" x="851" y="918" width="65" height="18" id="svg_47"/>
-<rect class="booth" x="845" y="1036" width="65" height="18" id="svg_48"/>
-<rect class="booth" x="656" y="1099" width="65" height="18" id="svg_49"/>
+<rect class="booth" x="740" y="1038" width="65" height="18" id="booth17"/>
+<rect class="booth" x="851" y="918" width="65" height="18" id="booth18"/>
+<rect class="booth" x="845" y="1036" width="65" height="18" id="booth19"/>
+<rect class="booth" x="656" y="1099" width="65" height="18" id="booth21"/>
 
 <rect class="booth" x="233" y="1213" width="74" height="21" id="booth25" transform="matrix(4.6440852291236576e-7,-0.8719121886797552,0.8719121886797552,4.6440852291236576e-7,-835.734608805689,1472.0783421106814) "/>
 <rect class="booth" x="257" y="1051" width="74" height="21" id="booth26" transform="matrix(0.7127737068708423,-0.5,0.5021797562249352,0.7127737068708423,-497.63622158381645,500.38574908686286) "/>
@@ -111,7 +112,7 @@ fill: cyan;
 <rect class="booth" x="527" y="1186" width="74" height="21" transform="matrix(0,0.9,-0.9,0.03287766790076221,1531.4962704153527,710.3756954396183) " id="booth2027"/>
 <rect class="booth" x="460" y="1221" width="74" height="21" id="booth2720" transform="matrix(-0.1,-0.9,0.9,-0.1,-628,1712) "/>
 <rect class="booth" x="243" y="1335" width="74" height="21" id="booth24" transform="matrix(0.5,0.7,-0.7,0.5,1075,505) "/>
-<rect class="booth" x="799" y="1340" width="74" height="21" id="svg_56" transform="matrix(0.5,-0,0.6,0.6,-640,1092) "/>
+<rect class="booth active" x="799" y="1340" width="74" height="21" id="svg_56" transform="matrix(0.5,-0,0.6,0.6,-640,1092) "/>
 
 <path class="wall" d="m12 904l0-717 946-1 0 719 -179-1 13-30 -114 0 15 31 -6810 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0z" id="svg_58"/>
 

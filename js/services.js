@@ -134,6 +134,10 @@ https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_
 "cso_onlineapp":""
 */
 
+        // ----------------------------------------------------------
+        //
+        //
+        
         
         // link the relevant information from the CSO mccormickconnect data
         // to each company object
@@ -143,23 +147,43 @@ https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_
           //csoData[k]["empId"] 
           if(this.csoData[k].empId == this.companies[i].empId )
           {
-            // name = organizationname
-              this.companies[i].branch = this.csoData[k].branch;
-              this.companies[i].website = this.csoData[k].website;
-              // facebook // twitter // linkedin
-              this.companies[i].facebook = this.csoData[k].facebook;
-              this.companies[i].twitter = this.csoData[k].twitter;
+              // Excluding these fields:
+              // organization name
+              // phone, fax, address1, address2, country
+              // facebook, twitter, linkedin
+
+              // name = organizationname
+              // this.companies[i].csoOrganizationName = this.csoData[k].cso_organizationName;
+              
+              this.companies[i].branch = this.csoData[k].cso_branch;
+              this.companies[i].industryCSO = this.csoData[k].cso_industry;
+              this.companies[i].websiteCSO = this.csoData[k].cso_website;
+
+              // Linkedin organization type is more reputable
+              // but not all companies have a LinkedIn page
+              this.companies[i].typeCSO = this.csoData[k].cso_orgType;
+              //this.companies[i]["type"] = this.csoData[k]["type"];
+                // csoOrgType cso_orgType 
+              
+              // I found errors in these 3 fields in McCormickConnect info
+              // (facebook / twitter / linkedin)
+              // also many companies do not fill them out
+              //
+              //this.companies[i].facebook = this.csoData[k].facebook;
+              //this.companies[i].twitter = this.csoData[k].twitter;
               //this.companies[i].linkedin = this.csoData[k].linkedin;
 
-              this.companies[i].industry = this.csoData[k].industry;
-              this.companies[i]["type"] = this.csoData[k]["type"];
-              // address1 // ,address2: // country
-              this.companies[i].city = this.csoData[k].city;
-              this.companies[i].state = this.csoData[k].state;
-              this.companies[i].zip = this.csoData[k].zip;
-              // phone  // fax
-              this.companies[i].description = this.csoData[k].profile;
-              // onlineApp
+              // onlineApp is also rarely filled out, but will include anyway
+              this.companies[i].onlineApp = this.csoData[k].cso_onlineapp;
+
+
+              this.companies[i].city = this.csoData[k].cso_city;
+              this.companies[i].state = this.csoData[k].cso_state;
+              this.companies[i].zip = this.csoData[k].cso_zip;
+
+              // description --> csoProfile
+              this.companies[i].profileCSO = this.csoData[k].cso_profile;
+              
               break;
           } 
         }
@@ -253,7 +277,7 @@ https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_
     //    for (var i = 0; i < this.booths.length; i++) {
     //      if(company.booth === booths[i].bNum) {
     //      }  }
-
+/*
 app.service('AttendeesService', function($q) {
   
   return {
@@ -280,6 +304,7 @@ app.service('AttendeesService', function($q) {
     }
   }
 })
+*/
 
 
 

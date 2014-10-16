@@ -14,6 +14,28 @@ app.controller('CompanyMapCtrl', function($scope, $location) {
       return "rotate("+degrees+", 0, 0);";
   };  
 
+
+// not currently working... bleh whatever
+  $scope.rotateLabel = function (boothRotation) {
+    var labelRotateDegrees = 0;
+    if(boothRotation != null)
+      {
+        // booth is vertical with bottom facing to left
+        if (boothRotation == 90)
+        {
+          boothRotation = -190;
+        }
+        // booth is vertical with bottom facing to right
+        else if (boothRotation == -90)
+        {
+
+        }
+        labelRotateDegrees = boothRotation;
+      
+    }
+    return "rotate("+labelRotateDegrees+", 0, 0);";
+  };  
+
   // these variables defined in booths.js
   $scope.bWidth = boothWidth;
   $scope.bHeight = boothHeight;

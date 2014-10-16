@@ -62,7 +62,9 @@ instead of boolean 0 1 its 0 "label that exists to prompt un-starring" -->
 
 
         <div class="item item-divider">Description</div>
-        <p class="padding">{{company.description}}</p>
+        <p class="padding">{{company.description}}
+        <br>
+        {{company |json }}</p>
 
 
 <div class="item item-divider assertive ">About {{company.name}}</div>
@@ -72,18 +74,127 @@ instead of boolean 0 1 its 0 "label that exists to prompt un-starring" -->
   {{company.industry}}
 </div>
 
-
+<!--
 <div class="item item-icon-left">
     <i class="icon ion-briefcase"></i>
     {{company.linkedinIndustry}}
-    <!--p>{{company.specialties}}</p-->
 </div>
 
 <p class="padding" style="color: #666;">
     {{company.specialties}}
 </p>
+-->
 
-<div class="item item-icon-left">
+
+<style>
+
+
+/**
+ * Items
+ 
+.item {
+  box-sizing: border-box;
+  height:54px;
+  line-height: 20px;
+   text-overflow: ellipsis;
+  vertical-align: baseline;
+  white-space: nowrap;
+  word-wrap: break-word;
+
+
+
+  margin: -1px;
+  padding: 16px;
+
+  padding-left: 54px; // for avatar
+
+  border-color: #ddd;
+  border-width: 1px;
+  border-style: solid;
+
+  background-color: #fff;
+  
+  color: #444; // 68 68 68
+  font-size: 16px; 
+
+  display: block;
+  position: relative;
+  z-index: 2;
+  
+  }
+
+
+font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+.item {
+border-color: #ddd;
+background-color: #fff;
+color: #444;
+position: relative;
+z-index: 2;
+display: block;
+margin: -1px;
+padding: 16px;
+border-width: 1px;
+border-style: solid;
+font-size: 16px;
+}
+
+.item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+element.style {
+}
+.item-icon-left {
+padding-left: 54px;
+}
+
+
+
+ .item-icon-left .icon {
+  left: 11px;
+  display: flex;
+  display: -webkit-box;
+
+display: -webkit-flex;
+display: -moz-box;
+display: -moz-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+-moz-align-items: center;
+align-items: center;
+position: absolute;
+top: 0;
+height: 100%;
+font-size: 32px;
+ }
+
+ .item-icon-left .icon:before, .item-icon-right .icon:before {
+display: block;
+width: 32px;
+text-align: center;
+}
+.ion-briefcase:before {
+content: "\f26c";
+}
+
+  * --------------------------------------------------
+ */
+
+ /* not intended to be clickable item */
+.item-info {
+  height: ;
+}
+
+</style>
+
+<div ng-show="{{company.size}}" class="item item-icon-left">
     <i class="icon ion-person-stalker"></i>
     {{company.size}}
 </div>
@@ -98,7 +209,7 @@ instead of boolean 0 1 its 0 "label that exists to prompt un-starring" -->
   {{company.city}}, {{company.state}}&nbsp; {{company.zip}}
 </div>
 
-<div class="item item-icon-left">
+<div ng-show="{{company.hqCity}}" class="item item-icon-left">
 <i class="icon ion-pin"></i>
     HQ: {{company.hqCity}} {{company.hqState}}&nbsp; {{company.hqZip}}
 </div>
@@ -119,17 +230,20 @@ instead of boolean 0 1 its 0 "label that exists to prompt un-starring" -->
     <i class="icon ion-social-twitter"></i>Twitter
 </a-->
 
-<a ng-show="{{company.linkedinID}}" class="item item-divider item-icon-left" href="{{company.linkedin}}" target="_blank">
+<a ng-show="{{company.linkedinIDNum}}" class="item item-divider item-icon-left" href="http://www.linkedin.com/company/{{company.linkedinIDNum}}" target="_blank">
     <i class="icon ion-social-linkedin"></i>
-    Linkedin
+    Linkedin 
 </a>
 
 
-<div class="item item-divider">
+<!--div class="item item-divider">
     <a class="clear" href="https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_id={{company.empId}}" target="_blank">
         <strong>McCormick</strong>
         <em>Connect</em>Employer Info</a>
-</div>
+</div-->
+
+
+
 
 
 <!-- formatting for mccormick connect seems to be overridden, particularly italic -->

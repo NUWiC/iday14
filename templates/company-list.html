@@ -42,11 +42,11 @@ Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).l
 &nbsp;&nbsp;&nbsp;<!-- hacky padding -->
     <label class="item-input-wrapper">
       <i class="icon ion-ios7-search placeholder-icon"></i>
-      <input type="search" placeholder="Search names..." ng-model="searchString" ng-change="scrollTop()">
+      <input type="search" placeholder="Search companies..." ng-model="searchString" ng-change="scrollTop()">
     </label>
 
     <button ng-if="searchString.length"
-            class="button button-small button-icon ion-android-close input-button"
+            class="button button-small button-icon ion-ios7-close-empty input-button"
             ng-click="clearSearch()"> </button>
   </ion-header-bar>
 
@@ -67,7 +67,9 @@ Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).l
               
              {{ c.name }}
              <!-- <h2> <i></i> {{ c.name }}</h2> h2 makes it harder to fit on one line-->
+             <!--
              <span class="item-note">{{ c.room }}</span>
+             -->
 
 
 
@@ -79,7 +81,15 @@ Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).l
 
               <!--i class="icon icon-circle ion-star" ng-class="c.starred ? 'icon-circle' : 'icon-circle-outline'"  ></i-->
 
+              <!--
              <p>{{ c.industry }}</p>
+
+             -->
+
+             <p>{{ c.room }}, Table {{c.booth}}</p>
+
+
+
              <!-- {{ c.room }}.... {{ c.id }} -->
              <!--i class="icon ion-ios7-arrow-right royal"></i-->
             </a>

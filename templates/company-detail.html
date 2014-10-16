@@ -63,8 +63,7 @@ instead of boolean 0 1 its 0 "label that exists to prompt un-starring" -->
 
         <div class="item item-divider">Description</div>
         <p class="padding">{{company.description}}
-        <br>
-        {{company |json }}</p>
+        </p>
 
 
 <div class="item item-divider assertive ">About {{company.name}}</div>
@@ -88,6 +87,10 @@ instead of boolean 0 1 its 0 "label that exists to prompt un-starring" -->
 
 <style>
 
+ /* not intended to be clickable item */
+.item-info {
+  height: ;
+}
 
 /**
  * Items
@@ -187,10 +190,7 @@ content: "\f26c";
   * --------------------------------------------------
  */
 
- /* not intended to be clickable item */
-.item-info {
-  height: ;
-}
+
 
 </style>
 
@@ -199,9 +199,10 @@ content: "\f26c";
     {{company.size}}
 </div>
 
+<!-- Mandatory McCormick Connect Field -->
 <div class="item item-icon-left">
   <i class="icon ion-information-circled"></i>
-  {{company.type}} &nbsp;&nbsp;&nbsp;(LinkedIn: {{company.companyType}})
+  {{company.type}} <!--&nbsp;&nbsp;&nbsp;(LinkedIn: {{company.companyType}})-->
 </div>
 
 <div class="item item-icon-left">
@@ -214,7 +215,7 @@ content: "\f26c";
     HQ: {{company.hqCity}} {{company.hqState}}&nbsp; {{company.hqZip}}
 </div>
 
-
+<!-- Mandatory McCormick Connect Field -->
 <div class="item item-divider item-icon-left">
     <i class="icon ion-link"></i>
     <a href="{{company.website}}" target="_blank">{{company.website}}</a>
@@ -235,6 +236,7 @@ content: "\f26c";
     Linkedin 
 </a>
 
+<!-- linkedinIDNum and linkedinID is friendly name -->
 
 <!--div class="item item-divider">
     <a class="clear" href="https://www.myinterfase.com/mccormick_northwestern/contactregistration.aspx?emp_id={{company.empId}}" target="_blank">

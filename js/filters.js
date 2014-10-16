@@ -54,6 +54,33 @@ app.filter('instantNameSearch', function(){
 });
 
 
+app.filter('industryFilter', function(){
+
+  return function(list, query){ //searchString --> query
+
+    if(!query){ return list; }
+    var result = [];
+    query = query.toLowerCase();
+
+    // Using the forEach helper method to loop through the array
+    angular.forEach(list, function(item){
+    
+    // NOTE: Only searches the specific property
+    // make sure to change the property
+    // of what you're searching here....
+    // cso_industry specialties
+      if(item.industry.toLowerCase().indexOf(query) !== -1 || item.cso_industry.toLowerCase().indexOf(query) !== -1)
+      {
+        result.push(item);
+      }
+    });
+
+    return result;
+  };
+
+});
+
+
 //
 // This directive enables images to load
 // in the angular-generated svg

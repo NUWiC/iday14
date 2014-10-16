@@ -158,7 +158,8 @@ app.service('CareerFairService', function($q) {
               this.companies[i].state = this.csoData[k].cso_state;  //state;
               this.companies[i].zip = this.csoData[k].cso_zip;  //zip;
               // phone  // fax
-              this.companies[i].description = this.csoData[k].cso_profile;  //profile;
+              // had to rename, description property belongs to the official SWE provided one
+              this.companies[i].descriptionCSO = this.csoData[k].cso_profile;  //profile;
               // onlineApp
               break;
           } 

@@ -50,10 +50,12 @@ Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).l
             ng-click="clearSearch()"> </button>
   </ion-header-bar>
 
-
+<!--  filter:userFilter | instantNameSearch:searchString | -->
         <ion-content>
           <ion-list>
-            <div ng-repeat="c in companies | filter:userFilter | instantNameSearch:searchString | orderBy:sortProp:asc">
+            <div ng-repeat="c in companies | filter:userFilter | filter:searchString | orderBy:sortProp:asc">
+
+
             <!-- ui-sref="tabs.companies.detail({companyNameId: c.compId})" -->
 
             <!-- http://lizzb.github.io/img/logos/carsdotcom/wide.png -->
@@ -88,8 +90,10 @@ Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).l
         </ion-content>
 
         <div id="result-count" class="bar bar-footer bar-stable">
-          <div class="title">Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).length}} of {{allCompanies.length}} total.</div>
+          <div class="title">Showing {{(allCompanies | filter:userFilter | filter:searchString ).length}} of {{allCompanies.length}} total.</div>
         </div>
+<!-- instantNameSearch:searchString ).length}} -->
+
 
 <!--ion-footer-bar id="result-count" class="bar bar-footer bar-stable">Showing {{(allCompanies | filter:userFilter | instantNameSearch:searchString ).length}} of {{allCompanies.length}} total.
 </ion-footer-bar-->
